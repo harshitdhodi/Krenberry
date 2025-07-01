@@ -92,7 +92,7 @@ const Footer = () => {
             <p className='text-sm text-left text-gray-600'>
               {footerData.description}
             </p>
-            <div className="flex space-x-4 mt-4">
+            {/* <div className="flex space-x-4 mt-4">
               <a href={footerData.linkedinLink} target='_blank' rel='noopener noreferrer' 
                  className="text-gray-600 hover:text-[#f3ca0d] transition-colors duration-300">
                 <FaLinkedin className="h-6 w-6" />
@@ -109,7 +109,7 @@ const Footer = () => {
                  className="text-gray-600 hover:text-[#f3ca0d] transition-colors duration-300">
                 <FaBehance className="h-6 w-6" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Services Column */}
