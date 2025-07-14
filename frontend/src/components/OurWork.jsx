@@ -220,7 +220,7 @@ const OurWorkComponent = () => {
 
   return (
     <div className="relative z-20 py-16 w-[90%] mx-auto">
-      <h2 className="text-4xl md:text-5xl text-center font-serif capitalize">
+      <h2 className="text-4xl md:text-5xl text-center font-semibold capitalize">
         See our <span className="text-[#EC2127]">work</span>
       </h2>
       <h3 className="text-xl md:text-2xl text-center text-[#39B54A]/80 mt-4 mb-16">

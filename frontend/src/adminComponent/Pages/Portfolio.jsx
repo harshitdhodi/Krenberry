@@ -208,7 +208,7 @@ const PortfolioTable = () => {
         <div className="grid md:grid-cols-2 md:gap-2 grid-cols-1">
 
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-serif">Heading</label>
+            <label className="block text-gray-700 font-bold mb-2 uppercase ">Heading</label>
             <input
               type="text"
               value={heading}
@@ -217,7 +217,7 @@ const PortfolioTable = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-serif">Sub heading</label>
+            <label className="block text-gray-700 font-bold mb-2 uppercase ">Sub heading</label>
             <input
               type="text"
               value={subheading}
@@ -228,7 +228,7 @@ const PortfolioTable = () => {
         </div>
         <button
           onClick={saveHeadings}
-          className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-serif"
+          className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-semibold"
         >
           Save
         </button>
@@ -236,17 +236,17 @@ const PortfolioTable = () => {
 
 
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold  text-gray-700 font-serif uppercase">News</h1>
+        <h1 className="text-xl font-bold  text-gray-700  uppercase">News</h1>
         <div className="flex gap-2">
  
-          <button className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-serif">
+          <button className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-semibold">
             <Link to="/portfolio/createPortfolio"><FaPlus size={15} /></Link>
           </button>
         </div>
       </div>
 
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold  text-gray-700 font-serif uppercase">Portfolio</h1>
+        <h1 className="text-xl font-bold  text-gray-700 uppercase">Portfolio</h1>
    
       </div>
       <div className="mb-4">
@@ -271,7 +271,7 @@ const PortfolioTable = () => {
                   {headerGroup.headers.map((column) => (
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-serif "
+                      className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-semibold "
                     >
                       <div className="flex items-center gap-2">
                         <span className="">{column.render("Header")}</span>
@@ -343,20 +343,20 @@ const PortfolioTable = () => {
         <button onClick={closeModal} className="absolute top-5 right-5 text-gray-500 hover:text-gray-700">
             <FaTimes size={20} />
           </button>
-          <h2 className="text-xl font-bold mb-4 font-serif">Portfolio</h2>
+          <h2 className="text-xl font-bold mb-4 font-">Portfolio</h2>
           {selectedPortfolio && (
             <div>
               <div className="flex mt-2">
-                <p className="mr-2 font-semibold font-serif">Category :</p>
+                <p className="mr-2 font-semibold ">Category :</p>
                 <p>{selectedPortfolio.categoryName}</p>
               </div>
               <div className="flex mt-2">
-                <p className="mr-2 font-semibold font-serif">title:</p>
+                <p className="mr-2 font-semibold ">title:</p>
                 <p>{selectedPortfolio.title}</p>
               </div>
 
               <div className="mt-2">
-                <p className="mr-2 font-semibold font-serif">Description :</p>
+                <p className="mr-2 font-semibold ">Description :</p>
                 <ReactQuill
                   readOnly={true}
                   value={selectedPortfolio.details}

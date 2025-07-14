@@ -110,7 +110,7 @@ export default function WeAreExpert() {
     <div className="container mx-auto px-4 my-16">
       <h2
         dangerouslySetInnerHTML={{ __html: heading }}
-        className="capitalize text-3xl md:text-4xl lg:text-5xl font-serif text-center mt-8 md:mt-12"
+        className="capitalize text-3xl md:text-4xl lg:text-5xl font-semibold text-center mt-8 md:mt-12"
       />
       <h2
         dangerouslySetInnerHTML={{ __html: subheading }}

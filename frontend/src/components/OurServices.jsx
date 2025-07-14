@@ -335,7 +335,7 @@ const ServiceCard = ({ service, isLarge }) => {
             </Link>
             <Link
               to={`/${service.slug}`}
-              className="text-2xl font-serif font-medium text-white relative z-10"
+              className="text-2xl font-semibold  text-white relative z-10"
             >
               <h3 className="my-8">{service.title}</h3>
             </Link>
@@ -457,7 +457,7 @@ const ServicesGrid = () => {
   return (
     <section className="md:my-20 md:py-16  py-4 px-4 bg-gray-50">
       <div className="w-[85%] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-serif text-center font-medium ">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center">
           Our <span className="text-[#EC2127]">Services</span>
         </h2>
         <h3 className=" md:text-[23px] text-[#39B54A]/80  text-center  pb-16 mt-4  ">

@@ -94,19 +94,19 @@ const Footer = () => {
             </p>
             {/* <div className="flex space-x-4 mt-4">
               <a href={footerData.linkedinLink} target='_blank' rel='noopener noreferrer' 
-                 className="text-gray-600 hover:text-[#f3ca0d] transition-colors duration-300">
+                 className="text-gray-600 hover:text-[#ec2127] transition-colors duration-300">
                 <FaLinkedin className="h-6 w-6" />
               </a>
               <a href={footerData.instagramLink} target='_blank' rel='noopener noreferrer'
-                 className="text-gray-600 hover:text-[#f3ca0d] transition-colors duration-300">
+                 className="text-gray-600 hover:text-[#ec2127] transition-colors duration-300">
                 <FaInstagram className="h-6 w-6" />
               </a>
               <a href={footerData.googleLink} target='_blank' rel='noopener noreferrer'
-                 className="text-gray-600 hover:text-[#f3ca0d] transition-colors duration-300">
+                 className="text-gray-600 hover:text-[#ec2127] transition-colors duration-300">
                 <FaGoogle className="h-6 w-6" />
               </a>
               <a href={footerData.behanceLink} target='_blank' rel='noopener noreferrer'
-                 className="text-gray-600 hover:text-[#f3ca0d] transition-colors duration-300">
+                 className="text-gray-600 hover:text-[#ec2127] transition-colors duration-300">
                 <FaBehance className="h-6 w-6" />
               </a>
             </div> */}
@@ -120,7 +120,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link 
                     to={`/${service.slug}`} 
-                    className="text-gray-600  text-sm cursor-pointer hover:text-[#f3ca0d] transition-colors duration-300"
+                    className="text-gray-600  text-sm cursor-pointer hover:text-[#ec2127] transition-colors duration-300"
                   >
                     {service.name}
                   </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
                 <li key={index}>
                   <Link 
                     to={link.path} 
-                    className="text-gray-600 text-sm cursor-pointer hover:text-[#f3ca0d] transition-colors duration-300"
+                    className="text-gray-600 text-sm cursor-pointer hover:text-[#ec2127] transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -155,7 +155,7 @@ const Footer = () => {
                   <Link 
                     to={link.path} 
                     rel='noopener noreferrer' 
-                    className="text-gray-600  text-sm cursor-pointer hover:text-[#f3ca0d] transition-colors duration-300"
+                    className="text-gray-600  text-sm cursor-pointer hover:text-[#ec2127] transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -178,7 +178,7 @@ const Footer = () => {
                     name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#f3ca0d] transition-colors duration-300"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#ec2127] transition-colors duration-300"
                     placeholder="Your Name"
                     required
                   />
@@ -189,14 +189,14 @@ const Footer = () => {
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#f3ca0d] transition-colors duration-300"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#ec2127] transition-colors duration-300"
                     placeholder="Your Email"
                     required
                   />
                 </div>
                 <button
                   type="submit"
-                  className={`w-full px-4 py-3 bg-[#f3ca0d] text-white rounded-lg hover:bg-[#e3ba00] 
+                  className={`w-full px-4 py-3 bg-[#ec2127] text-white rounded-lg hover:bg-red-600 
                     transition-colors duration-300 flex items-center justify-center space-x-2
                     ${loading ? 'opacity-75 cursor-not-allowed' : ''}`}
                   disabled={loading}

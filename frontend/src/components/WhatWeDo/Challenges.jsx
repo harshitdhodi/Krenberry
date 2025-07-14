@@ -108,7 +108,7 @@ const CustomNextArrow = (props) => (
   };
 
   const renderHeading = (heading) => {
-    return <div className="text-[30px] md:text-[50px] font-serif md:p-4 text-center flex flex-col flex-wrap" dangerouslySetInnerHTML={{ __html: heading }} />;
+    return <div className="text-[30px] md:text-[50px] font-semibold md:p-4 text-center flex flex-col flex-wrap" dangerouslySetInnerHTML={{ __html: heading }} />;
   };
 
   if (!dataLoaded || challengesData.length === 0) {
@@ -129,7 +129,7 @@ const CustomNextArrow = (props) => (
                   className={`team-member flex-shrink-0 h-96 p-6 shadow-md rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-black transition-transform duration-300 hover:shadow-xl  relative`}
                 >
                   <h2
-                    className="text-[22px] md:text-2xl font-serif text-white font-bold mb-4 text-wrap text-center md:text-left  md:pb-10"
+                    className="text-[22px] md:text-2xl text-white font-bold mb-4 text-wrap text-center md:text-left  md:pb-10"
                     dangerouslySetInnerHTML={{ __html: challenge.question }}
                   />
                   <p

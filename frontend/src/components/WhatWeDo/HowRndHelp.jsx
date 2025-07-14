@@ -111,7 +111,7 @@ export default function HowRndHelp() {
         className="flex flex-col mx-4 md:mx-20 lg:mx-40 md:flex-row items-center mt-12 md:mt-40 space-y-6 md:space-y-0 md:space-x-8"
       >
         <div className={`flex flex-col items-center md:w-2/3 space-y-4 ${isLargeScreen ? 'fade-in' : ''}`}>
-          <h2 className="text-2xl md:text-5xl text-white font-serif font-bold">{heading}</h2>
+          <h2 className="text-2xl md:text-5xl text-white font-bold">{heading}</h2>
           <p className="text-white text-lg md:text-xl">{subheading}</p>
         </div>
         <div className={`md:flex justify-center md:w-1/2 hidden ${isLargeScreen ? 'fade-in' : ''}`}>

@@ -47,7 +47,7 @@ export default function BookAcall() {
             <Link to="/contact">
             <button
             
-              className={`bg-[#f3ca0d] text-white py-2 px-6 rounded-lg mr-4 mb-4 lg:mb-0 font-bold`}
+              className={`bg-[#ec2127] text-white py-2 px-6 rounded-lg mr-4 mb-4 lg:mb-0 font-bold`}
             >
               Get Started
             </button>

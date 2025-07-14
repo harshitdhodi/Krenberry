@@ -222,8 +222,8 @@ const DesignProcess = ({ categoryId ,subcategoryId}) => {
     <div className="p-4 overflow-x-auto">
       <ToastContainer />
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold text-gray-700 font-serif uppercase">Design Process</h1>
-        <Link to={`/services/designProcess/${categoryId}/${subcategoryId}`} className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-serif">
+        <h1 className="text-xl text-gray-700 font-semibold uppercase">Design Process</h1>
+        <Link to={`/services/designProcess/${categoryId}/${subcategoryId}`} className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-semibold">
           <FaPlus size={15} />
         </Link>
       </div>
@@ -231,7 +231,7 @@ const DesignProcess = ({ categoryId ,subcategoryId}) => {
       <div className="mb-8 border border-gray-200 shadow-lg p-4 rounded">
         <div className="grid md:grid-cols-2 md:gap-2 grid-cols-1">
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-serif">Heading</label>
+            <label className="block text-gray-700 font-bold mb-2 uppercase font-semibold">Heading</label>
             <input
               type="text"
               value={heading}
@@ -241,7 +241,7 @@ const DesignProcess = ({ categoryId ,subcategoryId}) => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-serif">Subheading</label>
+            <label className="block text-gray-700 font-bold mb-2 uppercase font-semibold">Subheading</label>
             <input
               type="text"
               value={subheading}
@@ -251,7 +251,7 @@ const DesignProcess = ({ categoryId ,subcategoryId}) => {
             />
           </div>
         </div>
-        <button onClick={saveHeadings} className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-900 transition duration-300 uppercase font-serif">
+        <button onClick={saveHeadings} className="px-6 py-2 bg-gray-700 text-white rounded hover:bg-gray-900 transition duration-300 uppercase font-semibold">
           Save Heading
         </button>
       </div>

@@ -67,7 +67,7 @@ const GlobalSolution = () => {
       <div className="relative sm:pt-32 pt-24">
         <div className="container mx-auto py-12 sm:px-4 px-2 w-full sm:w-[67%]">
           <div className="text-center">
-            <h2 className="sm:text-5xl text-3xl font-semibold mb-4 font-serif text-white">
+            <h2 className="sm:text-5xl text-3xl font-semibold mb-4 text-white">
               <span dangerouslySetInnerHTML={{ __html: globalSolution.heading }} />
             </h2>
             <p className="sm:text-lg text-base mb-8 text-white font-inter sm:pt-10 pt-7">
