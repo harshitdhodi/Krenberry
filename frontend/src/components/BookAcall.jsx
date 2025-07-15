@@ -35,7 +35,7 @@ export default function BookAcall() {
 
       <div className="lg:w-1/2 mb-6 lg:mb-0 relative z-0">
         <h2
-          className="text-3xl lg:text-4xl font-bold mb-4"
+          className="text-3xl lg:text-4xl font-semibold mb-4"
           dangerouslySetInnerHTML={{ __html: call.heading }}
         ></h2>
         <p
@@ -47,7 +47,7 @@ export default function BookAcall() {
             <Link to="/contact">
             <button
             
-              className={`bg-[#ec2127] text-white py-2 px-6 rounded-lg mr-4 mb-4 lg:mb-0 font-bold`}
+              className={`bg-[#ec2127] text-white hover:bg-red-600 text-md py-2 px-6 rounded-lg mr-4 mb-4 lg:mb-0 font-semibold w-md`}
             >
               Get Started
             </button>

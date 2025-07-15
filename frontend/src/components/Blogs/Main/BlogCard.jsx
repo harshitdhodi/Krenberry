@@ -127,7 +127,7 @@ export default function HowRndHelp() {
         <div className="flex justify-center mt-5">
           <button
             onClick={handleLoadMore}
-            className="px-4 py-2 bg-[#333] text-white font-medium rounded hover:bg-[#334]"
+            className="px-4 py-2 bg-[#ec2127] text-white font-medium rounded hover:bg-red-600"
           >
             Load More
           </button>

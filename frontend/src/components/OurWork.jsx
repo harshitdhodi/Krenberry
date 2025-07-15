@@ -223,7 +223,7 @@ const OurWorkComponent = () => {
       <h2 className="text-4xl md:text-5xl text-center font-semibold capitalize">
         See our <span className="text-[#EC2127]">work</span>
       </h2>
-      <h3 className="text-xl md:text-2xl text-center text-[#39B54A]/80 mt-4 mb-16">
+      <h3 className="text-xl md:text-xl text-center text-[#39B54A]/80 mt-4 mb-16">
         Visualizing Success Through Our Work
       </h3>
 

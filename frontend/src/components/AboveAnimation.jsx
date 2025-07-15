@@ -42,7 +42,7 @@ const MainContent = () => {
       {/* Content Container */}
       <div className='bg-[#F7F4EE]'>
         <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-10 mt-24 sm:mt-36 md:mt-48 md:text-center relative bg-[#F7F4EE] pb-14 pt-10">
-          <h1 className="text-[34px] md:text-[50px] font-semibold mb-6">
+          <h1 className="text-4xl md:text-5xl font-semibold mb-6">
             {heading}
           </h1>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed md:mx-8 text-justify">

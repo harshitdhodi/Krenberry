@@ -460,7 +460,7 @@ const ServicesGrid = () => {
         <h2 className="text-4xl md:text-5xl font-semibold text-center">
           Our <span className="text-[#EC2127]">Services</span>
         </h2>
-        <h3 className=" md:text-[23px] text-[#39B54A]/80  text-center  pb-16 mt-4  ">
+        <h3 className=" md:text-xl text-[#39B54A]/80  text-center  pb-16 mt-4  ">
           Dedicated to Your Success
         </h3>
 

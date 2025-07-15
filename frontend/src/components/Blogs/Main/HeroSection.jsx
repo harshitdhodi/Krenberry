@@ -29,7 +29,7 @@ export default function HeroSection() {
       <h1 className="text-white text-6xl md:text-4xl lg:text-6xl font-semibold mb-7">
         {heroSection.heading || "Blogs"}
       </h1>
-      <p className="text-white text-lg md:text-xl lg:text-xl mb-6">
+      <p className="text-white max-w-screen-lg text-xl md:text-xl mb-6">
         {heroSection.subheading || "This is the blog page"}
       </p>
 

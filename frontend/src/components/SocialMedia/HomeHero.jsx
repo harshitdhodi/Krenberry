@@ -320,7 +320,7 @@ export default function HeroSection() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
       </div>
 
-      <div className="relative flex flex-col md:flex-row  justify-center gap-10 xl:gap-40 w-11/12 lg:w-4/5 mx-auto pt-16 ">
+      <div className="relative flex flex-col md:flex-row  justify-center gap-10 xl:gap-40 w-11/12 lg:w-4/5 mx-auto pt-44 ">
         <div className="md:w-[50%] space-y-8">
           <ReactQuill
             readOnly={true}

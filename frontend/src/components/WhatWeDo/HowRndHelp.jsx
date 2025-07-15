@@ -139,7 +139,7 @@ export default function HowRndHelp() {
                   <div key={i} className="flex flex-col gap-3 mb-2">
                     <div className="flex items-center gap-2 justify-start">
                       <FaCheckCircle className="text-xl" />
-                      <span className="text-lg md:text-xl font-bold" dangerouslySetInnerHTML={{ __html: feature.question }}></span>
+                      <span className="text-lg md:text-xl font-bold text-[#ec2127]" dangerouslySetInnerHTML={{ __html: feature.question }}></span>
                     </div>
                     <span className="pl-6" dangerouslySetInnerHTML={{ __html: feature.answer }}></span>
                   </div>

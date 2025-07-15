@@ -416,7 +416,7 @@ const HeroSection = () => {
         <div className="md:w-[50%] space-y-8">
           <div className="inline-flex items-center rounded-full bg-white px-2 py-2 pr-4">
             {/* <span className="h-2 w-2 rounded-full bg-blue-500"></span> */}
-            <span className="ml-2 text-[16px] font-medium bg-red-500 rounded-full text-white px-4 py-1 ">
+            <span className="ml-2 text-[16px] font-medium bg-[#ec2127] rounded-full text-white px-4 py-1 ">
               Best
             </span>
             <span className="ml-2 text-[16px] text-gray-700 font-semibold">
@@ -439,7 +439,7 @@ const HeroSection = () => {
         </Link>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="md:hidden px-8 py-3 bg-gradient-to-r from-red-500 to-red-500 text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg w-full"
+            className="md:hidden px-8 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg w-full"
           >
             Get in Touch
           </button>
@@ -447,7 +447,7 @@ const HeroSection = () => {
 
         <div className="hidden md:block xl:w-[25%] w-[40%] relative">
           <div className="absolute -top-4 -left-4 z-10">
-            <FaStarOfLife className="text-red-500 text-4xl animate-[spin_5s_linear_infinite]" />
+            <FaStarOfLife className="text-[#ec2127] text-4xl animate-[spin_5s_linear_infinite]" />
           </div>
           <ContactForm onSubmit={handleFormSubmit} loading={loading} />
         </div>

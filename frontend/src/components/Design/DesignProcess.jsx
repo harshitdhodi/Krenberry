@@ -90,7 +90,7 @@ export default function HowRndHelp() {
     <div className="p-4 md:p-8">
     <div ref={containerRef} className="flex flex-col items-center mt-12 md:mt-24 space-y-6">
       <div className="text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">Our Design Process</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">Our Design <span className="text-[#ec2127]">Process</span></h2>
         <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
           You can expect a collaborative process that will combine multiple services to elevate your brand, story, user experience, and overall customer success.
         </p>
