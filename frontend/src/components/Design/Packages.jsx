@@ -85,10 +85,21 @@ const PricingSection = ({ setServiceSlug }) => {
     const whatIsTheir = parseJsonArray(item.whatIsTheir[0]);
     const whatIsNotTheir = parseJsonArray(item.whatIsNotTheir[0]);
 
+    const splitHeading = (text) => {
+    const words = text.trim().split(" ");
+    const midpoint = Math.floor(words.length / 2);
+    const firstPart = words.slice(0, midpoint).join(" ") + " ";
+    const secondPart = words.slice(midpoint).join(" ");
+    return { firstPart, secondPart };
+  };
+
     return (
       <div className="bg-[#F7F4EE] border border-gray-300 shadow-lg rounded-lg p-6 mb-10 flex flex-col min-h-[400px]">
         <div className="flex justify-between items-center">
-          <h3 className="md:text-2xl font-bold mb-2">{item.title}</h3>
+          <h3 className="md:text-2xl font-bold mb-2">
+            {splitHeading(item.title).firstPart}
+            <span className="text-[#ec2127]">{splitHeading(heading).secondPart}
+            </span></h3>
         </div>
         <p className="mb-4" dangerouslySetInnerHTML={{ __html: item.description }} />
         <p className="text-4xl text-black font-bold pb-2">₹{item.price}</p>
@@ -129,12 +140,20 @@ const PricingSection = ({ setServiceSlug }) => {
       </div>
     );
   };
+  const splitHeading = (text) => {
+    const words = text.trim().split(" ");
+    const midpoint = Math.floor(words.length / 2);
+    const firstPart = words.slice(0, midpoint).join(" ") + " ";
+    const secondPart = words.slice(midpoint).join(" ");
+    return { firstPart, secondPart };
+  };
 
   return (
     <div className="mt-20">
       <div className="text-center p-6">
         <h2 className="text-2xl md:text-4xl font-bold font-serif text-gray-800 mb-8">
-          {heading}
+         {splitHeading(heading).firstPart}
+  <span className="text-[#ec2127]">{splitHeading(heading).secondPart}</span>
         </h2>
         <p className="text-lg md:text-2xl px-4 md:px-20 text-gray-600">
           <ReactQuill

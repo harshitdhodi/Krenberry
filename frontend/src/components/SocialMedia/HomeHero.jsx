@@ -200,7 +200,7 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
         className={`w-full py-3 ${
           loading
             ? "bg-gray-400"
-            : "bg-gradient-to-r from-red-500 to-red-600"
+            : "bg-gradient-to-r from-[#ec2127] to-red-600"
         } text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg`}
       >
         {loading ? "Submitting..." : "Let's Connect"}

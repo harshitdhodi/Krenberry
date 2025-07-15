@@ -458,7 +458,7 @@ const ServicesGrid = () => {
     <section className="md:my-20 md:py-16  py-4 px-4 bg-gray-50">
       <div className="w-[85%] mx-auto">
         <h2 className="text-4xl md:text-5xl font-semibold text-center">
-          Our <span className="text-[#EC2127]">Services</span>
+          Our <span className="text">Services</span>
         </h2>
         <h3 className=" md:text-xl text-[#39B54A]/80  text-center  pb-16 mt-4  ">
           Dedicated to Your Success
