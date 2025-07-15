@@ -144,18 +144,17 @@ const Navbar = () => {
 
         <div className=" mx-20 flex justify-between items-center py-2">
           <div className="flex items-center space-x-8">
-           <NavLink to="/">
-  {colorlogo && colorlogo.photo ? (
-    <img
-      src={`/api/logo/download/${colorlogo.photo}`}
-      alt={colorlogo.alt || ""}
-      title={colorlogo.imgTitle || ""}
-      className="h-18 w-[27%]"
-    />
-  ) : null}
-</NavLink>
+            <NavLink to="/">
+              {colorlogo && colorlogo.photo ? (
+                <img
+                  src={`/api/logo/download/${colorlogo.photo}`}
+                  alt={colorlogo.alt || ""}
+                  title={colorlogo.imgTitle || ""}
+                  className="min-h-12 md:h-12 lg:h-14 xl:h-20 max-w-[150px] min-w-[100px] w-auto object-contain"
+                />
+              ) : null}
+            </NavLink>
           </div>
-
           <div className="hidden lg:flex items-center space-x-2 relative ">
             {navData.map((link) => (
               <NavItem key={link.id} item={link} closeMenu={closeMenu} />
@@ -164,7 +163,7 @@ const Navbar = () => {
 
           <div className="lg:flex items-center space-x-4">
             <button onClick={() => navigate(`/contact`)}>
-              <div className="flex justify-center font-semibold bg-[#EC2127] px-4 py-1 mb-2 lg:mb-0 text-white rounded hover:text-white items-center">
+              <div className="flex justify-center font-semibold bg-[#EC2127] hover:bg-red-600 px-4 py-1 mb-2 lg:mb-0 text-white rounded hover:text-white items-center">
                 <pre className="font-sans">Get Quote</pre>
               </div>
             </button>

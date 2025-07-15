@@ -130,7 +130,7 @@ export default function LatestProject() {
               className="inline-block mt-2"
               onClick={(e) => e.stopPropagation()}
             >
-              <button className="px-4 py-2 bg-[#f5e042] text-white rounded-lg hover:bg-[#e6d43d] transition-colors">
+              <button className="px-4 py-2 bg-[#ec2127] text-white rounded-lg hover:bg-red-600 transition-colors">
                 Visit Website
               </button>
             </a>
@@ -142,8 +142,8 @@ export default function LatestProject() {
 
   return (
     <div className="py-16">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif p-4 text-center">
-        Latest <span className="text-[#f3ca0d]">Projects</span>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold p-4 text-center">
+        Latest <span className="text-[#ec2127]">Projects</span>
       </h2>
       <p className="text-lg md:text-2xl px-4 md:px-20 text-gray-600 text-center">
         Discover Our Latest Project Milestones

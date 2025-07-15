@@ -117,7 +117,7 @@ export default function HowRndHelp() {
         className="flex flex-col items-center mt-12 md:mt-24 space-y-6"
       >
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             {heading}
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ export default function HowRndHelp() {
               return (
                 <div
                   key={index}
-                  className="absolute top-1/2  -left-4  transform -translate-y-1/2 bg-[#f3ca0d] text-white text-lg font-medium rounded-full w-10 h-10 flex items-center justify-center"
+                  className="absolute top-1/2  -left-4  transform -translate-y-1/2 bg-[#ec2127] text-white text-lg font-medium rounded-full w-10 h-10 flex items-center justify-center"
                   style={{ top: topPosition }}
                   id={`progress-number-${index}`}
                 >
@@ -171,7 +171,7 @@ export default function HowRndHelp() {
                   <h3 className="text-xl md:text-2xl font-semibold">
                     {service.title}
                   </h3>
-                  <span className="bg-[#f3ca0d] text-black text-xs font-medium px-3 py-1 rounded-full flex-shrink-0">
+                  <span className="bg-[#ec2127] text-black text-xs font-medium px-3 py-1 rounded-full flex-shrink-0">
                     {" "}
                     Step {index + 1}
                   </span>

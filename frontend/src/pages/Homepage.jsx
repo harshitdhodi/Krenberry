@@ -32,7 +32,7 @@ export default function Homepage() {
       <MainContent />
       <ScrollSection />
       <WhatYouGet />
-      <StandardPackage/>
+      {/* <StandardPackage/> */}
       <Faq />
       <BookAcall />
       <PremiumTemplatesSection />

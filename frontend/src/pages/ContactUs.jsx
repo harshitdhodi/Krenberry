@@ -140,7 +140,7 @@ const ContactUs = () => {
       <div className="relative">
         <img src={`/api/logo/download/${photo}`} alt={alt} title={imgTitle} className="w-full h-[55vh] object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center flex-col gap-8 pt-16 md:pt-32">
-          <h1 className="text-white text-4xl md:text-7xl font-serif capitalize">{heading}</h1>
+          <h1 className="text-white text-4xl md:text-7xl font-semibold capitalize">{heading}</h1>
           <p className="text-xl md:text-2xl text-white text-center">{subheading}</p>
         </div>
       </div>
@@ -197,7 +197,7 @@ const ContactUs = () => {
                     <input
                       type="text"
                       id="name"
-                      className="w-full p-2 border rounded focus:border-yellow-500 outline-none"
+                      className="w-full p-2 border rounded focus:border-red-500 outline-none"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       required
@@ -208,7 +208,7 @@ const ContactUs = () => {
                     <input
                       type="email"
                       id="email"
-                      className="w-full p-2 border rounded focus:border-yellow-500 outline-none"
+                      className="w-full p-2 border rounded focus:border-red-500 outline-none"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -220,7 +220,7 @@ const ContactUs = () => {
                   <input
                     type="tel"
                     id="phone"
-                    className="w-full p-2 border rounded focus:border-yellow-500 outline-none"
+                    className="w-full p-2 border rounded focus:border-red-500 outline-none"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     required
@@ -231,7 +231,7 @@ const ContactUs = () => {
                   <input
                     type="text"
                     id="subject"
-                    className="w-full p-2 border rounded focus:border-yellow-500 outline-none"
+                    className="w-full p-2 border rounded focus:border-red-500 outline-none"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     required
@@ -242,7 +242,7 @@ const ContactUs = () => {
                   <textarea
                     id="message"
                     rows="4"
-                    className="w-full p-2 border rounded focus:border-yellow-500 outline-none"
+                    className="w-full p-2 border rounded focus:border-red-500 outline-none"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     required
@@ -250,7 +250,7 @@ const ContactUs = () => {
                 </div>
                 <button
                   type="submit"
-                  className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 flex items-center"
+                  className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 flex items-center"
                   disabled={isSubmitting}
                 >
                   <Send className="mr-2" size={16} />

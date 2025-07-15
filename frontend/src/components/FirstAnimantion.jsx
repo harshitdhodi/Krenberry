@@ -238,10 +238,10 @@ const ScrollSection = () => {
               ref={(el) => (descriptionRefs.current[index] = el)}
               className={`description mb-1  ${index > 0 ? "pt-32 lg:pt-80" : ""}`}
             >
-              <h2 className="text-2xl text-[#e4d500] pb-6">{animation.title}</h2>
-              <h3 className="text-3xl lg:text-5xl font-semibold pb-6 text-black">{animation.subtitle}</h3>
+              <h2 className="text-xl text-[#EC2127] pb-6">{animation.title}</h2>
+              <h3 className="text-4xl md:text-5xl font-semibold pb-6 text-black">{animation.subtitle}</h3>
               <p
-                className="text-lg lg:text-2xl pb-6"
+                className="text-lg md:text-xl lg:2xl pb-6"
                 dangerouslySetInnerHTML={{ __html: animation.description }}
               ></p>
 

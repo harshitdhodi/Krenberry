@@ -110,11 +110,11 @@ export default function WeAreExpert() {
     <div className="container mx-auto px-4 my-16">
       <h2
         dangerouslySetInnerHTML={{ __html: heading }}
-        className="capitalize text-3xl md:text-4xl lg:text-5xl font-serif text-center mt-8 md:mt-12"
+        className="capitalize text-4xl md:text-5xl font-semibold text-center mt-8 md:mt-12"
       />
       <h2
         dangerouslySetInnerHTML={{ __html: subheading }}
-        className="text-[20px] text-center mt-4 mb-12"
+        className="text-xl text-center text-[#39b54a] mt-4 mb-12"
       />
       
       {/* Grid container with responsive gap and padding */}

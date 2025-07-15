@@ -108,7 +108,7 @@ const CategoryTable = () => {
   return (
     <div className="p-4 overflow-x-auto">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold  text-gray-700 font-serif uppercase">Categories</h1>
+        <h1 className="text-xl font-bold  text-gray-700 uppercase">Categories</h1>
         <button className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300">
           <Link to="/PackageCategory/CreatePackageCategory"><FaPlus size={15} /></Link>
         </button>
@@ -124,7 +124,7 @@ const CategoryTable = () => {
                   {headerGroup.headers.map((column) => (
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-serif"
+                      className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-semibold"
                     >
                       <div className="flex items-center gap-2 ">
                         <span>{column.render("Header")}</span>

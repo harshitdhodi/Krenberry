@@ -36,8 +36,8 @@ const ProjectFeatures = () => {
           {subheading || "We create user-centric digital experiences"}
         </p>
 
-        {/* <button className="relative mt-6 py-2 px-7 text-lg font-bold bg-[#f3ca0d] text-white rounded-3xl overflow-hidden group">
-          <span className="absolute inset-0 bg-gradient-to-r from-[#f3ca0d] to-yellow-800 transform origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" />
+        {/* <button className="relative mt-6 py-2 px-7 text-lg font-bold bg-[#ec2127] text-white rounded-3xl overflow-hidden group">
+          <span className="absolute inset-0 bg-gradient-to-r from-[#ec2127] to-yellow-800 transform origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" />
           <span className="relative z-10">Get Started</span>
         </button> */}
 

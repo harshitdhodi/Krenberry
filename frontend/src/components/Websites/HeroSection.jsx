@@ -51,7 +51,7 @@ const AutocompleteInput = ({
         onFocus={() => setIsOpen(true)}
         placeholder={loading ? "Loading cities..." : placeholder}
         disabled={disabled || loading}
-        className="w-full px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+        className="w-full px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-red-400 transition-colors duration-300"
       />
       {isOpen && filteredSuggestions?.length > 0 && (
         <ul className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-40 overflow-auto">
@@ -193,7 +193,7 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
           }
           value={formData[field]}
           onChange={handleInputChange}
-          className="w-full mb-4 px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+          className="w-full mb-4 px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-[#ec2127] transition-colors duration-300"
           required
         />
       ))}
@@ -232,8 +232,8 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
         className={`w-full py-3 ${
           loading
             ? "bg-gray-400"
-            : "bg-gradient-to-r from-yellow-400 to-yellow-500"
-        } text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 shadow-lg`}
+            : "bg-gradient-to-r from-red-500 to-red-600"
+        } text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg`}
       >
         {loading ? "Submitting..." : "Let's Connect"}
       </button>
@@ -408,18 +408,18 @@ const HeroSection = () => {
   return (
     <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black md:min-h-[80vh] py-4 flex items-center justify-between text-white overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="relative flex flex-col md:flex-row  justify-center gap-10 xl:gap-40 w-11/12 pt-16 lg:w-4/5 mx-auto my-32 ">
         <div className="md:w-[50%] space-y-8">
           <div className="inline-flex items-center rounded-full bg-white px-2 py-2 pr-4">
             {/* <span className="h-2 w-2 rounded-full bg-blue-500"></span> */}
-            <span className="ml-2 text-[16px] font-medium bg-yellow-500 rounded-full text-white px-4 py-1 ">
+            <span className="ml-2 text-[16px] font-medium bg-[#ec2127] rounded-full text-white px-4 py-1 ">
               Best
             </span>
-            <span className="ml-2 text-[16px] text-gray-700">
+            <span className="ml-2 text-[16px] text-gray-700 font-semibold">
             {heroSection.title}
             </span>
           </div>
@@ -432,14 +432,14 @@ const HeroSection = () => {
           />
         <Link to="/contact">
         <button
-           className="mt-6 px-8 py-3 bg-gradient-to-r from-yellow-300 to-yellow-500 text-black font-semibold rounded-lg hover:from-yellow-400 hover:to-yellow-500 transform hover:scale-105 transition-all duration-300 shadow-lg "
+           className="mt-6 px-8 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg "
          >
            Reaquest Proposal
          </button>
         </Link>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="md:hidden px-8 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 shadow-lg w-full"
+            className="md:hidden px-8 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg w-full"
           >
             Get in Touch
           </button>
@@ -447,7 +447,7 @@ const HeroSection = () => {
 
         <div className="hidden md:block xl:w-[25%] w-[40%] relative">
           <div className="absolute -top-4 -left-4 z-10">
-            <FaStarOfLife className="text-yellow-400 text-4xl animate-[spin_5s_linear_infinite]" />
+            <FaStarOfLife className="text-[#ec2127] text-4xl animate-[spin_5s_linear_infinite]" />
           </div>
           <ContactForm onSubmit={handleFormSubmit} loading={loading} />
         </div>

@@ -32,9 +32,9 @@ const Companies = () => {
   return (
     <div className="mb-10">
       <div className="py-6 lg:pt-20 pt-5 px-4 mt-20 ">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-black font-medium text-center font-serif">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl text-black font-semibold text-center ">
           Companies using this{" "}
-          <span className="text-[#f3ca0d]">service</span>
+          <span className="text-[#ec2127]">service</span>
         </h1>
       </div>
       <div className="py-6 mx-4 sm:mx-8 lg:mx-16 mt-8">
