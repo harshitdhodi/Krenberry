@@ -21,7 +21,7 @@ const Chatbot = () => {
     };
   }, []);
 
-  return <div id="chatbot-container"></div>;
+  return <div id="chatbot-container" className='bg-red-600'></div>;
 };
 
 export default Chatbot;
