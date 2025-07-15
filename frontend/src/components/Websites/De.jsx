@@ -110,6 +110,14 @@ export default function HowRndHelp() {
     };
   }, [services]);
 
+  const splitHeading = (text) => {
+    const words = text.trim().split(" ");
+    const midpoint = Math.floor(words.length / 2);
+    const firstPart = words.slice(0, midpoint).join(" ") + " ";
+    const secondPart = words.slice(midpoint).join(" ");
+    return { firstPart, secondPart };
+  };
+
   return (
     <div className="p-4 md:p-8">
       <div
@@ -118,7 +126,8 @@ export default function HowRndHelp() {
       >
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
-            {heading}
+            {splitHeading(heading).firstPart}
+  <span className="text-[#ec2127]">{splitHeading(heading).secondPart}</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
            {subheading}

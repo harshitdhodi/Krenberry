@@ -209,7 +209,7 @@ const NewsTable = () => {
         <div className="grid md:grid-cols-2 md:gap-2 grid-cols-1">
 
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-semibold">Heading</label>
+            <label className="block text-gray-700  mb-2 uppercase font-semibold">Heading</label>
             <input
               type="text"
               value={heading}
@@ -218,7 +218,7 @@ const NewsTable = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-semibold">Sub heading</label>
+            <label className="block text-gray-700 mb-2 uppercase font-semibold">Sub heading</label>
             <input
               type="text"
               value={subheading}
@@ -235,7 +235,7 @@ const NewsTable = () => {
         </button>
       </div>
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold  text-gray-700 font-semibold uppercase">  Packages</h1>
+        <h1 className="text-xl text-gray-700 font-semibold uppercase">  Packages</h1>
         <div className="flex gap-2">
           <select
             className="px-2 py-2 border rounded-md focus:outline-none focus:border-blue-500 transition duration-300"

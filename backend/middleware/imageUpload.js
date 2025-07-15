@@ -27,11 +27,11 @@ const upload = multer({
     storage: storage,
     limits: { fileSize: 5 * 1024 * 1024 }, // Limit file size to 5MB
     fileFilter: function (req, file, cb) {
-        const allowedTypes = ['.jpg', '.jpeg', '.png', '.webp'];
+        const allowedTypes = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
         const ext = path.extname(file.originalname).toLowerCase();
         
         if (!allowedTypes.includes(ext)) {
-            cb(new Error('Only .jpg, .jpeg, .png, and .webp files are allowed'));
+            cb(new Error('Only .jpg, .jpeg, .png, .webp, and .gif files are allowed'));
             return;
         }
         cb(null, true);
@@ -44,8 +44,8 @@ const processImage = async (filePath) => {
         const fileExtension = path.extname(filePath).toLowerCase();
         const directory = path.dirname(filePath);
         const filename = path.basename(filePath, fileExtension);
-        const tempPath = path.join(directory, `${filename}_temp.webp`);
-        const finalPath = path.join(directory, `${filename}.webp`);
+        const tempPath = path.join(directory,` ${filename}_temp.webp`);
+        const finalPath = path.join(directory,` ${filename}.webp`);
 
         // Check if the uploaded file is an image
         if (fileExtension !== '.webp' && ['.jpg', '.jpeg', '.png'].includes(fileExtension)) {

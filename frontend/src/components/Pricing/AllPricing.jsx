@@ -113,10 +113,19 @@ const PricingSection = () => {
     });
   };
 
+  const splitHeading = (text) => {
+    const words = text.trim().split(" ");
+    const midpoint = Math.floor(words.length / 2);
+    const firstPart = words.slice(0, midpoint).join(" ") + " ";
+    const secondPart = words.slice(midpoint).join(" ");
+    return { firstPart, secondPart };
+  };
+
   return (
     <div className="mt-20">
       <div className="text-center p-6 rounded-lg shadow-md">
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-gray-800 mb-4">{heading}</h2>
+        <h2 className="text-4xl md:text-5xl font-bold font-serif text-gray-800 mb-4">{splitHeading(heading).firstPart}
+  <span className="text-[#ec2127]">{splitHeading(heading).secondPart}</span></h2>
         <p className="text-lg md:text-2xl px-4 md:px-20 text-gray-600">{subHeading}</p>
       </div>
 
