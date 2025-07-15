@@ -138,19 +138,20 @@ const DynamicMetaTags = () => {
         };
     }, [metaData, googleSettings]);
 
-    useEffect(() => {
-        if (favicon) {
-            const existingLink = document.querySelector("link[rel='icon']");
-            if (existingLink) {
-                document.head.removeChild(existingLink);
-            }
+    // useEffect(() => {
+    //     if (favicon) {
+    //         const existingLink = document.querySelector("link[rel='icon']");
+    //         if (existingLink) {
+    //             document.head.removeChild(existingLink);
+    //         }
 
-            const link = document.createElement("link");
-            link.rel = "icon";
-            link.href = `/api/logo/download/${favicon.photo}`;
-            document.head.appendChild(link);
-        }
-    }, [favicon]);
+    //         const link = document.createElement("link");
+    //         link.rel = "icon";
+    //         link.href = `/api/logo/download/${favicon.photo}`;
+    //         link.type = "image/x-icon"; // Add proper MIME type
+    //         document.head.appendChild(link);
+    //     }
+    // }, [favicon]);
 
     return (
         <>

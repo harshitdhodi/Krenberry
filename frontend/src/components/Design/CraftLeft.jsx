@@ -65,7 +65,7 @@ export default function CraftLeft() {
   return (
     <div className="flex flex-col items-center">
   
-      <div className="flex flex-col lg:flex-row-reverse  gap-10  lg:px-28  w-full">
+      <div className="flex flex-col lg:flex-row-reverse  gap-10  xl:px-28  w-full">
      {/* Text Content for Large Screens */}
      <div className="w-full lg:w-1/2  px-4 flex flex-col justify-center order-1">
          {/* Render the heading only if service and heading are available */}

@@ -209,7 +209,7 @@ const NewsTable = () => {
         <div className="grid md:grid-cols-2 md:gap-2 grid-cols-1">
 
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-serif">Heading</label>
+            <label className="block text-gray-700 font-bold mb-2 uppercase font-semibold">Heading</label>
             <input
               type="text"
               value={heading}
@@ -218,7 +218,7 @@ const NewsTable = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 font-bold mb-2 uppercase font-serif">Sub heading</label>
+            <label className="block text-gray-700 font-bold mb-2 uppercase font-semibold">Sub heading</label>
             <input
               type="text"
               value={subheading}
@@ -229,13 +229,13 @@ const NewsTable = () => {
         </div>
         <button
           onClick={saveHeadings}
-          className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-serif"
+          className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-semibold"
         >
           Save
         </button>
       </div>
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-xl font-bold  text-gray-700 font-serif uppercase">  Packages</h1>
+        <h1 className="text-xl font-bold  text-gray-700 font-semibold uppercase">  Packages</h1>
         <div className="flex gap-2">
           <select
             className="px-2 py-2 border rounded-md focus:outline-none focus:border-blue-500 transition duration-300"
@@ -246,7 +246,7 @@ const NewsTable = () => {
             <option value="Meta Available">Meta Available</option>
             <option value="Meta Unavailable">Meta Unavailable</option>
           </select>
-          <button className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-serif">
+          <button className="px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-900 transition duration-300 font-semibold">
             <Link to="/package/createPackage"><FaPlus size={15} /></Link>
           </button>
         </div>
@@ -273,7 +273,7 @@ const NewsTable = () => {
                   {headerGroup.headers.map((column) => (
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-serif "
+                      className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-semibold "
                     >
                       <div className="flex items-center gap-2">
                         <span className="">{column.render("Header")}</span>

@@ -83,7 +83,7 @@ const PricingSection = () => {
           <h3 className="text-xl font-bold mb-2">{item.title}</h3>
           <span dangerouslySetInnerHTML={{ __html: item.description }}/>
           <p className="text-4xl text-black font-bold pb-2">${item.price}</p>
-          <button className="mt-2 w-full px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm sm:text-base">
+          <button className="mt-2 w-full px-4 py-2 bg-red-500 text-white rounded-lg text-sm sm:text-base">
             Get Started
           </button>
           <div className="mb-2 pt-3">
@@ -150,7 +150,7 @@ const PricingSection = () => {
                   onClick={() => handleCategoryClick(category)}
                   className={`px-4 py-2 text-lg font-inter focus:outline-none ${
                     selectedCategory === category
-                      ? "bg-yellow-500 text-white rounded-lg"
+                      ? "bg-red-500 text-white rounded-lg"
                       : "text-gray-800 border-transparent"
                   }`}
                 >
@@ -165,7 +165,7 @@ const PricingSection = () => {
                       onClick={() => handleSubcategoryClick(subcategory)}
                       className={`px-4 py-2 text-lg font-inter focus:outline-none ${
                         selectedSubcategory === subcategory
-                          ? "bg-yellow-500 text-white rounded-lg"
+                          ? "bg-red-500 text-white rounded-lg"
                           : "text-gray-800 border-transparent"
                       }`}
                     >

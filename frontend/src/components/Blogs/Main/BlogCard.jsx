@@ -101,9 +101,9 @@ export default function HowRndHelp() {
 
               <button
                 onClick={() => handleReadMore(blog.slug)} // Use blog.slug to navigate
-                className="relative mt-3 py-1 px-4 text-mg font-bold bg-[#f3ca0d] text-white rounded-3xl overflow-hidden group"
+                className="relative mt-3 py-1 px-4 text-mg font-bold bg-[#ec2127] text-white rounded-3xl overflow-hidden group"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-[#f3ca0d] to-yellow-800 transform origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                <span className="absolute inset-0 bg-gradient-to-r from-[#ec2127] to-red-600 transform origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100" />
                 <span className="relative z-10">Read More</span>
               </button>
             </div>
@@ -127,7 +127,7 @@ export default function HowRndHelp() {
         <div className="flex justify-center mt-5">
           <button
             onClick={handleLoadMore}
-            className="px-4 py-2 bg-[#333] text-white font-medium rounded hover:bg-[#334]"
+            className="px-4 py-2 bg-[#ec2127] text-white font-medium rounded hover:bg-red-600"
           >
             Load More
           </button>

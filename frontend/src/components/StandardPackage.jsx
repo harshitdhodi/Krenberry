@@ -41,19 +41,19 @@ const PricingPackage = () => {
 
   return (
     <div className="w-full max-w-3xl mx-auto p-10 mb-16">
-         <h2 className="text-3xl sm:text-4xl lg:text-5xl  text-center  font-serif">
+         <h2 className="text-3xl sm:text-4xl lg:text-5xl  text-center  font-semibold">
         Standard Package
       </h2>
       <h3 className=" md:text-[23px]  text-center  pb-16 mt-4 text-gray-700 ">
       Unlock Your Business Potential with Our Standard Package for Lasting Success
       </h3>
-      <div className="relative overflow-hidden border-2  border-yellow-600 rounded-lg shadow-xl bg-white">
-        <div className="absolute top-2 right-8 px-3 py-1 bg-yellow-500 text-black transform rotate-45 translate-x-8 translate-y-6">
+      <div className="relative overflow-hidden border-2  border-red-600 rounded-lg shadow-xl bg-white">
+        <div className="absolute top-2 right-8 px-3 py-1 bg-[#39B54A] text-black transform rotate-45 translate-x-8 translate-y-6">
           Best Value
         </div>
 
         {/* Header Section */}
-        <div className="text-center  bg-gradient-to-tr from-yellow-300   to-yellow-700 text-white p-6">
+        <div className="text-center  bg-gradient-to-tr from-rose-500 to-red-600 text-white p-6">
           <h2 className="text-[29px] font-bold mb-2 max-w-[90%]">
             {title || "Ultimate Growth Package: A One-Time Investment for Lifelong Growth"}
           </h2>
@@ -80,7 +80,7 @@ const PricingPackage = () => {
                 className="flex items-center gap-3 hover:bg-blue-50 p-2 rounded-lg transition-colors duration-200"
               >
                 <div className="flex-shrink-0">
-                  <Check className="w-5 h-5 text-yellow-500" />
+                  <Check className="w-5 h-5 text-[#EC2127]" />
                 </div>
                 <span className="text-gray-700">{feature}</span>
               </div>
@@ -89,8 +89,8 @@ const PricingPackage = () => {
 
           <Link to="/contact">
             <button
-              className="w-full mt-8 bg-yellow-400 text-black py-3 px-6 rounded-lg font-semibold 
-            hover:bg-yellow-700 transition-colors duration-200 shadow-lg"
+              className="w-full mt-8 bg-[#EC2127] text-white py-3 px-6 rounded-lg font-semibold 
+            hover:bg-red-600 transition-colors duration-200 shadow-lg"
             >
               Get Started Now
             </button>

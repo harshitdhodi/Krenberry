@@ -99,8 +99,8 @@ function IndustryServiceSlider() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mb-12 text-center">
-        <h2 className="text-4xl md:text-5xl font-serif font-medium">
-          Our <span className="text-yellow-500">Services</span>
+        <h2 className="text-4xl md:text-5xl font-semibold">
+          Our <span className="text-[#ec2127]">Services</span>
         </h2>
         <h3 className="mt-4 text-lg md:text-xl">
           Visualizing Success Through Our Work

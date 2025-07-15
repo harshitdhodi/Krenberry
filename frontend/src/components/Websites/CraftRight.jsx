@@ -122,7 +122,7 @@ export default function CraftRight() {
 
         {/* Video or Photo Content */}
         <div className="w-full lg:w-1/2 flex items-center justify-center order-2">
-          <div className="relative rounded-2xl border-[3px] m-10 overflow-hidden group transition-all duration-300">
+          <div className="relative rounded-2xl border-[3px] m-5 overflow-hidden group transition-all duration-300">
             {videoUrl ? (
               <video 
                 src={videoUrl}
@@ -137,7 +137,7 @@ export default function CraftRight() {
                 <img
                   src={`/api/image/download/${service.photo[0]}`} // Display the first photo if video isn't available
                   alt="Service Image"
-                  className="w-[450px] h-[450px] object-cover rounded-2xl"
+                  className="w-[700px] h-[400px] object-cover rounded-2xl"
                 />
               )
             )}

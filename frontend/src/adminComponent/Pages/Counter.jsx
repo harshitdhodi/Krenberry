@@ -49,7 +49,7 @@ const CountersTable = () => {
         Header: "Photo",
         accessor: "photo",
         Cell: ({ value }) => {
-          return <img src={`/api/logo/download/${value}`} alt="counter" className=" w-fit h-20" />;
+          return <img src={`/api/icon/download/${value}`} alt="counter" className=" w-fit h-20" />;
 
         },
         disableSortBy: true,

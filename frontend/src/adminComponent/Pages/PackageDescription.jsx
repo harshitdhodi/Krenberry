@@ -206,7 +206,7 @@ const NewsTable = () => {
                         {...column.getHeaderProps(
                           column.getSortByToggleProps()
                         )}
-                        className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-serif "
+                        className="py-2 px-4 border-b border-gray-300 cursor-pointer uppercase font-semibold "
                       >
                         <div className="flex items-center gap-2">
                           <span className="">{column.render("Header")}</span>

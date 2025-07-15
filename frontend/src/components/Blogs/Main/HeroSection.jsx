@@ -26,10 +26,10 @@ export default function HeroSection() {
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col items-center justify-center text-center pt-44 pb-16 p-6">
-      <h1 className="text-white text-6xl md:text-4xl lg:text-7xl font-serif mb-7">
+      <h1 className="text-white text-6xl md:text-4xl lg:text-6xl font-semibold mb-7">
         {heroSection.heading || "Blogs"}
       </h1>
-      <p className="text-white text-lg md:text-xl lg:text-2xl mb-6">
+      <p className="text-white max-w-screen-lg text-xl md:text-xl mb-6">
         {heroSection.subheading || "This is the blog page"}
       </p>
 

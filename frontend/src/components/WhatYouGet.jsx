@@ -64,7 +64,7 @@ export default function WhatYouGet() {
       </div>
       <div className="relative md:pb-20">
         <div className="relative mx-auto  px-6 z-10 ">
-          <h2 className=" text-4xl md:text-5xl font-serif text-center mb-16" dangerouslySetInnerHTML={{ __html: heading }}>
+          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16" dangerouslySetInnerHTML={{ __html: heading }}>
           </h2>
           <div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -335,7 +335,7 @@ const ServiceCard = ({ service, isLarge }) => {
             </Link>
             <Link
               to={`/${service.slug}`}
-              className="text-2xl font-serif font-medium text-white relative z-10"
+              className="text-2xl font-semibold  text-white relative z-10"
             >
               <h3 className="my-8">{service.title}</h3>
             </Link>
@@ -350,28 +350,7 @@ const ServiceCard = ({ service, isLarge }) => {
             </Link>
           </div>
 
-          {hasImage && (
-            <Link
-              to={`/${service.slug}`}
-              className="w-full hidden xl:flex  relative flex-col justify-center items-center "
-            >
-              <div className="relative   group-hover:scale-105 transition-transform duration-500 h-full ">
-                {/* <div className="absolute inset-0 transform -translate-x-2 -translate-y-2">
-                  <div className="w-full h-full rounded-full border-2 border-white/20" />
-                </div>
-                <div className="absolute inset-0 transform translate-x-2 translate-y-2">
-                  <div className="w-full h-full rounded-full border-2 border-white/20" />
-                </div> */}
-                <img
-                  src={service.image}
-                  alt={service.alt}
-                  title={service.imgtitle}
-                  className="xl:h-full xl:w-full  object-contain object-center relative z-10 
-                    transition-all duration-500 group-hover:rotate-1"
-                />
-              </div>
-            </Link>
-          )}
+         
         </div>
       </div>
     </div>
@@ -457,10 +436,10 @@ const ServicesGrid = () => {
   return (
     <section className="md:my-20 md:py-16  py-4 px-4 bg-gray-50">
       <div className="w-[85%] mx-auto">
-        <h2 className="text-4xl md:text-5xl font-serif text-center font-medium ">
+        <h2 className="text-4xl md:text-5xl font-semibold text-center">
           Our <span className="text-[#EC2127]">Services</span>
         </h2>
-        <h3 className=" md:text-[23px] text-[#39B54A]/80  text-center  pb-16 mt-4  ">
+        <h3 className=" md:text-xl text-[#39B54A]/80  text-center  pb-16 mt-4  ">
           Dedicated to Your Success
         </h3>
 

@@ -100,7 +100,7 @@ const MobileNavbar = () => {
     <div className="lg:hidden">
       <div className="bg-white border-b border-gray-200 px-4 py-3 flex justify-between items-center">
         <NavLink to="/">
-        <img src={`/api/logo/download/${colorlogo.photo}`} alt={colorlogo.alt} title={colorlogo.imgTitle} className="h-8" />
+        <img src={`/api/logo/download/${colorlogo.photo}`} alt={colorlogo.alt} title={colorlogo.imgTitle} className="h-12" />
         </NavLink>
         <button onClick={toggleMenu}>
           {isMenuOpen ? <HiX className="text-gray-800 w-6 h-6" /> : <HiMenu className="text-gray-800 w-6 h-6" />}

@@ -200,8 +200,8 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
         className={`w-full py-3 ${
           loading
             ? "bg-gray-400"
-            : "bg-gradient-to-r from-yellow-400 to-yellow-500"
-        } text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 shadow-lg`}
+            : "bg-gradient-to-r from-red-500 to-red-600"
+        } text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg`}
       >
         {loading ? "Submitting..." : "Let's Connect"}
       </button>
@@ -317,10 +317,10 @@ export default function HeroSection() {
     <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black md:min-h-[80vh] py-4 flex items-center justify-between text-white overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-red-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
       </div>
 
-      <div className="relative flex flex-col md:flex-row  justify-center gap-10 xl:gap-40 w-11/12 lg:w-4/5 mx-auto pt-16 ">
+      <div className="relative flex flex-col md:flex-row  justify-center gap-10 xl:gap-40 w-11/12 lg:w-4/5 mx-auto pt-44 ">
         <div className="md:w-[50%] space-y-8">
           <ReactQuill
             readOnly={true}
@@ -332,7 +332,7 @@ export default function HeroSection() {
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className="md:hidden px-8 py-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-semibold rounded-lg hover:from-yellow-500 hover:to-yellow-600 transform hover:scale-105 transition-all duration-300 shadow-lg w-full"
+            className="md:hidden px-8 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold rounded-lg hover:from-red-500 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg w-full"
           >
             Get in Touch
           </button>
@@ -340,7 +340,7 @@ export default function HeroSection() {
 
         <div className="hidden md:block xl:w-[25%] w-[40%] relative">
           <div className="absolute -top-4 -left-4 z-10">
-            <FaStarOfLife className="text-yellow-400 text-4xl animate-[spin_5s_linear_infinite]" />
+            <FaStarOfLife className="text-red-500 text-4xl animate-[spin_5s_linear_infinite]" />
           </div>
           <ContactForm onSubmit={handleFormSubmit} loading={loading} />
         </div>

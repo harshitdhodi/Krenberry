@@ -87,28 +87,17 @@ const PricingSection = () => {
     const whatIsNotTheir = parseJsonArray(item.whatIsNotTheir[0]);
 
     return (
-      <div className="bg-[#F7F4EE] border border-gray-300 shadow-lg rounded-lg p-6 mb-4">
-      
+      <div className="bg-[#F7F4EE] border border-gray-300 shadow-lg rounded-lg p-6 mb-4 flex flex-col min-h-[400px]">
         <div className="flex justify-between items-center">
           <h3 className="md:text-2xl font-bold mb-2">{item.title}</h3>
         </div>
-        <p
-          className="mb-4"
-          dangerouslySetInnerHTML={{ __html: item.description }}
-        />
-        <p className="text-4xl text-black font-bold pb-2">₹{item.price}</p>
-        <button
-          className="mt-2 w-full px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm sm:text-base"
-          onClick={() => navigate(`/contact`)}
-        >
-          Get Started
-        </button>
-
-        <div className="mt-6 mb-4 text-md text-gray-600">
+         <p className="text-4xl text-black font-bold pb-2">₹{item.price}</p>
+        <p className="mb-4" dangerouslySetInnerHTML={{ __html: item.description }} />
+        <div className="mt-6 mb-4 text-md text-gray-600 flex-grow">
           <ul className="list-disc list-inside">
             {whatIsTheir.map((detail, index) => (
               <li key={index} className="flex gap-2 mb-4">
-                <FaCheck className="text-yellow-500 text-md flex-shrink-0 mt-2" />
+                <FaCheck className="text-[#ec2127] text-md flex-shrink-0 mt-2" />
                 {detail}
               </li>
             ))}
@@ -117,16 +106,11 @@ const PricingSection = () => {
             <p className="">
               <b>Additional Revisions</b>: After the free virtual meeting, any
               further changes will be charged on an hourly basis.
-              <span
-                className="text-yellow-500 cursor-pointer"
-                onClick={togglePackageView}
-              >
+              <span className="text-[#ec2127] cursor-pointer" onClick={togglePackageView}>
                 (Hourly Rates)
               </span>
             </p>
           )}
-        </div>
-        <div className="mb-2">
           <ul className="mt-2 mb-4 text-md text-gray-600">
             {whatIsNotTheir.map((exclusion, index) => (
               <li key={index} className="flex gap-2 mb-4">
@@ -136,6 +120,13 @@ const PricingSection = () => {
             ))}
           </ul>
         </div>
+       
+        <button
+          className="mt-auto w-full px-4 py-2 bg-[#ec2127] text-white rounded-lg text-sm sm:text-base"
+          onClick={() => navigate(`/contact`)}
+        >
+          Get Started
+        </button>
       </div>
     );
   };
@@ -146,7 +137,7 @@ const PricingSection = () => {
         <div className="text-center p-6">
         {!showHourlyPackages && 
          <>
-          <h2 className="text-2xl md:text-4xl font-bold font-serif text-gray-800 mb-8">
+          <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 mb-8">
           {heading}
         </h2>
           <p className="text-lg md:text-2xl px-4 md:px-20 text-gray-600"  dangerouslySetInnerHTML={{ __html: subHeading }}></p>
@@ -163,7 +154,7 @@ const PricingSection = () => {
           {showHourlyPackages && (
             <button
               onClick={togglePackageView}
-              className=" px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600"
+              className=" px-6 py-2 bg-[#ec2127] text-white rounded-lg hover:bg-red-600"
             >
               Back to Regular Packages
             </button>
