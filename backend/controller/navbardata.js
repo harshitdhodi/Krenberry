@@ -13,15 +13,33 @@ const getFormattedCategoriesFromAllSchemas = async () => {
     const portfolioCategories = await PortfolioCategory.find().lean();
     const industryCategories = await Industriescategory.find().lean();
 
+    // Sort serviceCategories to prioritize "Graphic Designing"
+    const sortedServiceCategories = serviceCategories.sort((a, b) => {
+      const aName = (a.category || '').trim();
+      const bName = (b.category || '').trim();
+      if (aName === "Graphic Designing") return -1;
+      if (bName === "Graphic Designing") return 1;
+      return aName.localeCompare(bName);
+    });
+
+    // Sort packageCategories to prioritize "Graphic Designing"
+    const sortedPackageCategories = packageCategories.sort((a, b) => {
+      const aName = (a.category || '').trim();
+      const bName = (b.category || '').trim();
+      if (aName === "Graphic Designing") return -1;
+      if (bName === "Graphic Designing") return 1;
+      return aName.localeCompare(bName);
+    });
+console.log(sortedPackageCategories)
     // Recursive function to format the categories into the desired structure
     const formatCategories = (items, parentId = '', parentName = '') => {
       return items.map((item, index) => {
         const id = parentId ? `${parentId}-${index + 1}` : `${index + 1}`;
         const formattedItem = {
           id,
-          name: item.category || parentName,  // Use 'name' if available, otherwise default
+          name: item.category || parentName, // Use 'category' as the main name
           slug: item.slug,
-          component: item.component || 'DefaultComponent',  // Fallback to 'DefaultComponent' if undefined
+          component: item.component || 'DefaultComponent', // Fallback to 'DefaultComponent' if undefined
         };
 
         // Check for sub-items and format them recursively
@@ -68,21 +86,21 @@ const getFormattedCategoriesFromAllSchemas = async () => {
         name: 'Services',
         slug: 'websites',
         component: 'MainService',
-        subItems: formatCategories(serviceCategories, '2'),
+        subItems: formatCategories(sortedServiceCategories, '2'), // Use sortedServiceCategories
       },
       {
         id: '3',
         name: 'Packages',
         slug: 'website-packages',
         component: 'MainPackage',
-        subItems: formatCategories(packageCategories, '3'),
+        subItems: formatCategories(sortedPackageCategories, '3'), // Use sortedPackageCategories
       },
       {
         id: '4',
         name: 'Industries',
         slug: 'educational-marketing',
         component: 'MainIndustries',
-        subItems: formatCategories(industryCategories, '4'),  // Add sub-items for industries if needed
+        subItems: formatCategories(industryCategories, '4'),
       },
       {
         id: '5',

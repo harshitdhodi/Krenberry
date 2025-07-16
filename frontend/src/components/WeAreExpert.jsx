@@ -107,7 +107,7 @@ export default function WeAreExpert() {
   );
 
   return (
-    <div className="container mx-auto px-4 my-16">
+    <div className="max-w-8xl mx-auto xl:px-28 px-4 my-16">
       <h2
         dangerouslySetInnerHTML={{ __html: heading }}
         className="capitalize text-4xl md:text-5xl font-semibold text-center mt-8 md:mt-12"

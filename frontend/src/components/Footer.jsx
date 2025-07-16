@@ -77,8 +77,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#F7F4EE] text-black px-4 sm:px-6 md:px-8 lg:px-16 xl:px-36 py-6 md:py-10">
-      <section className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+      <section className="max-w-8xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8">
           
           {/* Company Info Column */}
           <div className="lg:col-span-1 col-span-1 sm:col-span-2">
@@ -167,7 +167,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Column */}
-          <div className="xl:col-span-1 col-span-1 sm:col-span-2">
+          <div className="xl:col-span-2 col-span-1 sm:col-span-2">
             <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100">
               <h4 className="font-bold text-lg lg:text-xl mb-3 sm:mb-4 lg:mb-6 text-gray-800">
                 Weekly Design Juice
@@ -182,7 +182,7 @@ const Footer = () => {
                     name="name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-3 sm:px-4 lg:px-5 py-2.5 sm:py-3 lg:py-4 border border-gray-200 rounded-lg text-sm lg:text-base 
+                    className="w-full px-3 sm:px-4 lg:px-5 py-2.5 sm:py-3 lg:py-1 border border-gray-200 rounded-lg text-sm lg:text-base 
                       focus:outline-none focus:border-[#ec2127] focus:ring-2 focus:ring-[#ec2127]/20 
                       transition-all duration-300 bg-gray-50 hover:bg-white"
                     placeholder="Your Name"
@@ -195,7 +195,7 @@ const Footer = () => {
                     name="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3 sm:px-4 lg:px-5 py-2.5 sm:py-3 lg:py-4 border border-gray-200 rounded-lg text-sm lg:text-base 
+                    className="w-full px-3 sm:px-4 lg:px-5 py-2.5 sm:py-3 lg:py-1 border border-gray-200 rounded-lg text-sm lg:text-base 
                       focus:outline-none focus:border-[#ec2127] focus:ring-2 focus:ring-[#ec2127]/20 
                       transition-all duration-300 bg-gray-50 hover:bg-white"
                     placeholder="Your Email"
@@ -204,7 +204,7 @@ const Footer = () => {
                 </div>
                 <button
                   type="submit"
-                  className={`w-full px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 lg:py-4 bg-[#ec2127] text-white rounded-lg 
+                  className={`w-full px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 lg:py-2 bg-[#ec2127] text-white rounded-lg 
                     hover:bg-red-600 hover:shadow-lg active:transform active:scale-95
                     transition-all duration-300 flex items-center justify-center space-x-2 lg:space-x-3 
                     text-sm lg:text-base font-medium lg:font-semibold shadow-sm

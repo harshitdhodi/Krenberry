@@ -47,8 +47,8 @@ export default function WhatYouGet() {
   }
 
   return (
-    <div className='relative md:pt-56 pt-32 pb-10'>
-      <div className="absolute top-0 left-0 right-0 w-full h-32 sm:h-48 rotate-180">
+    <div className='relative md:pt-16 pt-32 pb-16'>
+      {/* <div className="absolute top-0 left-0 right-0 w-full h-32 sm:h-48 rotate-180">
         <svg
           className="w-full h-full"
           viewBox="0 0 1440 320"
@@ -61,9 +61,9 @@ export default function WhatYouGet() {
             d="M0,224L60,202.7C120,181,240,139,360,122.7C480,107,600,117,720,138.7C840,160,960,192,1080,202.7C1200,213,1320,203,1380,197.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
           />
         </svg>
-      </div>
-      <div className="relative md:pb-20">
-        <div className="relative mx-auto  px-6 z-10 ">
+      </div> */}
+      <div className="relative max-w-8xl mx-auto xl:px-24 ">
+        <div className="relative  mx-auto  px-6 z-10 ">
           <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16" dangerouslySetInnerHTML={{ __html: heading }}>
           </h2>
           <div>

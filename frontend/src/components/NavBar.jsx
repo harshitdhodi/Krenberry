@@ -123,6 +123,7 @@ const Navbar = () => {
         const response = await fetchNavData();
         if (Array.isArray(response.data)) {
           setNavData(response.data);
+          console.log(response.data);
         } else {
           console.error("Navigation data is not an array:", response);
         }
@@ -142,7 +143,7 @@ const Navbar = () => {
           Our website is currently under construction. Please check back later.
         </div>
 
-        <div className=" mx-20 flex justify-between items-center py-2">
+        <div className=" mx-20 flex justify-between items-center ">
           <div className="flex items-center space-x-8">
             <NavLink to="/">
               {colorlogo && colorlogo.photo ? (
