@@ -29,7 +29,7 @@ const ProjectFeatures = () => {
   return (
     <div className="flex flex-col items-center justify-center py-32 md:pt-40  bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <div className="text-center mx-10 md:mx-35%">
-        <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-serif mb-7">
+        <h1 className="text-white  text-4xl md:text-5xl lg:text-6xl font-semibold mb-7">
           {heading}
         </h1>
         <p className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-6">
