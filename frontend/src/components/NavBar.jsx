@@ -147,12 +147,15 @@ const Navbar = () => {
           <div className="flex items-center space-x-8">
             <NavLink to="/">
               {colorlogo && colorlogo.photo ? (
-                <img
-                  src={`/api/logo/download/${colorlogo.photo}`}
-                  alt={colorlogo.alt || ""}
-                  title={colorlogo.imgTitle || ""}
-                  className="min-h-12 md:h-12 lg:h-14 xl:h-20 max-w-[150px] min-w-[100px] w-auto object-contain"
-                />
+                <div className="relative">
+                  <img
+                    src={`/api/logo/download/${colorlogo.photo}`}
+                    alt={colorlogo.alt || ""}
+                    title={colorlogo.imgTitle || ""}
+                    className="min-h-12 md:h-12 lg:h-14 xl:h-20 max-w-[150px] min-w-[100px] w-auto object-contain"
+                  />
+                  <div className="absolute inset-0 bg-transparent"></div>
+                </div>
               ) : null}
             </NavLink>
           </div>
