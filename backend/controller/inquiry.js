@@ -16,7 +16,7 @@ const postInquiry = async (req, res) => {
     const newInquiry = new Inquiry(inquiryData);
     const savedInquiry = await newInquiry.save();
 
-    const logoImageUrl = "https://rndtechnosoft.com/api/logo/download/rndlogo.png";
+    const logoImageUrl = "https://krenberry.com/api/logo/download/rndlogo.png";
     const logoStyle = "width: 100px; height: auto;";
 
     const emailHTML = `
@@ -64,7 +64,7 @@ const postInquiry = async (req, res) => {
       </head>
       <body>
           <div class="container">
-              <img src="${logoImageUrl}" style="${logoStyle}" alt="RND Technosoft Logo"/>
+              <img src="${logoImageUrl}" style="${logoStyle}" alt="Krenberry Logo"/>
               <h2>New Inquiry</h2>
               <p><span class="field">First Name:</span> ${newInquiry.firstname}</p>
               <p><span class="field">Last Name:</span> ${newInquiry.lastname}</p>
@@ -98,12 +98,12 @@ const postInquiry = async (req, res) => {
         <html>
         <body>
           <div style="text-align: center; padding: 20px;">
-            <img src="${logoImageUrl}" style="${logoStyle}" alt="RND Technosoft Logo"/>
+            <img src="${logoImageUrl}" style="${logoStyle}" alt="Krenberry Logo"/>
             <h2>Thank You for Your Inquiry</h2>
             <p>Dear ${inquiryData.firstname || 'Valued Customer'},</p>
             <p>Thank you for reaching out. We have received your inquiry and will get back to you soon.</p>
             <p>Best regards,</p>
-            <p>RND Technosoft</p>
+            <p>Krenberry</p>
              <div class="footer">
                   <p>This is an automated email. Please do not reply.</p>
               </div>

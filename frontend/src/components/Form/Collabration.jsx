@@ -21,12 +21,12 @@ const CollaborationInquiries = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 mt-32">
-      <h1 className="text-4xl font-bold mb-4">Collaboration inquiries</h1>
+      <h1 className="text-4xl font-bold mb-4">Collaboration <span className='text-[#ec2127]'>Inquiries</span></h1>
       <p className="mb-6">At Kolm, we value the power of partnerships and believe in rewarding those who help us grow.</p>
 
       <h2 className="text-2xl font-bold mb-2">Referral Program</h2>
       <p className="mb-6">
-        Do you know someone who could benefit from our services? Refer them to Kolm and you'll receive a 10% commission on the net sale. It's our way of
+        Do you know someone who could benefit from our services? Refer them to Kolm and you&apos;ll receive a 10% commission on the net sale. It's our way of
         saying thank you for spreading the word and supporting our mission which is to revolutionize the way businesses manage their design and website needs
         through our innovative subscription-based model, offering unlimited design services and comprehensive website packages. Fill out the form to get
         started.
@@ -34,7 +34,7 @@ const CollaborationInquiries = () => {
 
       <h2 className="text-2xl font-bold mb-2">PR Inquiries</h2>
       <p className="mb-6">
-        Are you a PR professional, influencer, or YouTube creator interested in collaborating with us? We'd love to hear from you! Fill out the form below, and our
+        Are you a PR professional, influencer, or YouTube creator interested in collaborating with us? We&apos;d love to hear from you! Fill out the form below, and our
         team will respond within 24 hours.
       </p>
 
@@ -111,7 +111,7 @@ const CollaborationInquiries = () => {
           ></textarea>
         </div>
 
-        <button type="submit" className="bg-black text-white font-bold py-2 px-4 rounded">
+        <button type="submit" className="bg-[#ec2127] text-white font-bold py-2 px-4 rounded">
           Submit
         </button>
       </form>

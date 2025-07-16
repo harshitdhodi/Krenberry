@@ -166,7 +166,7 @@ const CareerInquiryTable = () => {
           <h3 className=" font-semibold text-[45px] text-white font-serif">PM</h3>
           <p className=" font-bold text-[40px] text-black bg-white w-16 h-16 flex items-center justify-center rounded shadow">{countWithFields}</p>
         </div>
-        <div className="rounded bg-gradient-to-r from-yellow-400 to-yellow-600 p-4 flex justify-between items-center px-12">
+        <div className="rounded bg-gradient-to-r from-red-500 to-red-700 p-4 flex justify-between items-center px-12">
           <h3 className=" font-semibold text-[45px] text-white font-serif">SEO</h3>
           <p className="font-bold text-[40px] text-black bg-white w-16 h-16 flex items-center justify-center rounded shadow">{countWithoutFields}</p>
         </div>

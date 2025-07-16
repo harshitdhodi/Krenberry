@@ -27,7 +27,7 @@ const createPopupInquiry = async (req, res) => {
       subject: "New Inquiry Received",
       html: `
                 <div style="text-align: center;">
-                    <img src="https://rndtechnosoft.com/api/logo/download/rndlogo.png" alt="RND Technosoft Logo" style="width: 150px; height: auto;"/>
+                    <img src="https://krenberry.com/api/logo/download/rndlogo.png" alt="Krenberry Logo" style="width: 150px; height: auto;"/>
                     <h2>A new inquiry has been submitted</h2>
                     <p><strong>Name:</strong> ${newInquiry.name}</p>
                     <p><strong>Email:</strong> ${newInquiry.email}</p>
@@ -43,12 +43,12 @@ const createPopupInquiry = async (req, res) => {
       subject: "Inquiry Submitted Successfully",
       html: `
                 <div style="text-align: center;">
-                    <img src="https://rndtechnosoft.com/api/logo/download/photo_1730452853512.png" alt="RND Technosoft Logo" style="width: 150px; height: auto;"/>
+                    <img src="https://krenberry.com/api/logo/download/photo_1730452853512.png" alt="Krenberry Logo" style="width: 150px; height: auto;"/>
                     <h2>Thank You for Your Inquiry</h2>
                     <p>Hi ${name},</p>
                     <p>Thank you for reaching out to us! Your inquiry has been submitted successfully.</p>
                     <p>Our team will get back to you shortly.</p>
-                    <p>Best regards,<br>RND Technosoft</p>
+                    <p>Best regards,<br>Krenberry</p>
                 </div>
             `,
     };

@@ -23,7 +23,7 @@ exports.CreateCareerInquiry = async (req, res) => {
 
     await newInquiry.save();
 
-    const logoImageUrl = "https://rndtechnosoft.com/api/logo/download/rndlogo.png";
+    const logoImageUrl = "https://krenberry.com/api/logo/download/rndlogo.png";
     const logoStyle = "width: 100px; height: auto;";
 
     // HTML Email Template
@@ -80,7 +80,7 @@ exports.CreateCareerInquiry = async (req, res) => {
       </head>
       <body>
         <div class="container">
-            <img src="${logoImageUrl}" style="${logoStyle}" alt="RND Technosoft Logo"/>
+            <img src="${logoImageUrl}" style="${logoStyle}" alt="Krenberry Logo"/>
             <p class="centered-text">New Inquiry!!</p>
             <p><span class="field">Name:</span> ${newInquiry.name}</p>
             <p><span class="field">Email:</span> ${newInquiry.email}</p>

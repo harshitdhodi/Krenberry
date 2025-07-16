@@ -83,7 +83,7 @@ exports.CreateCareerInquiry = async (req, res) => {
       </head>
       <body>
         <div class="container">
-            <img class="logo" src="https://rndtechnosoft.com/api/logo/download/rndlogo.png" alt="RND Technosoft Logo">
+            <img class="logo" src="https://krenberry.com/api/logo/download/rndlogo.png" alt="Krenberry Logo">
             <p class="centered-text">New Career Inquiry!!</p>
             <p><span class="field">Name:</span> ${newInquiry.name}</p>
             <p><span class="field">Email:</span> ${newInquiry.email}</p>

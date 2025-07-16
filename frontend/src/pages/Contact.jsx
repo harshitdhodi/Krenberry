@@ -99,7 +99,7 @@ const GetInTouch = () => {
     <div className="bg-white p-8 mt-24">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center">
         <div className="md:w-1/2 pr-8">
-          <h1 className="text-4xl font-bold text-[#ec2127] mb-6">Rnd.</h1>
+          <h1 className="text-4xl font-bold text-[#ec2127] mb-6">Krenberry</h1>
           <h2 className="text-3xl font-bold mb-6">Get in touch</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="flex space-x-4">
@@ -205,7 +205,7 @@ const GetInTouch = () => {
               By clicking "Submit" I agree to the <a href="#" className="text-blue-600">Terms of Use</a> and the <a href="#" className="text-blue-600">Privacy Statement</a>
             </div> */}
             <div className="flex items-center space-x-4">
-              <button type="submit" className="px-6 py-2 bg-yellow-500 text-white rounded">Submit</button>
+              <button type="submit" className="px-6 py-2 bg-[#ec2127] text-white rounded">Submit</button>
               {/* <a href="#" className="text-orange-500">Looking for support? →</a> */}
             </div>
           </form>

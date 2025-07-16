@@ -29,7 +29,7 @@ exports.addEmail = async (req, res) => {
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'Newsletter Subscription Confirmation',
-            text: `Hello,${name}\n\nThank you for subscribing to our newsletter! You will now receive updates from us.\n\nBest regards,\nRND Technosoft.`
+            text: `Hello,${name}\n\nThank you for subscribing to our newsletter! You will now receive updates from us.\n\nBest regards,\nKrenberry.`
         };
 
         // Send the email

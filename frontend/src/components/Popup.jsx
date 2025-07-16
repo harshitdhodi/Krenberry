@@ -191,7 +191,7 @@ const AwardLandingPage = () => {
                 {/* Left Section */}
                 <div className="hidden md:block w-full bg-gray-800 p-6 lg:p-8 text-white">
                     <h2 className="text-xl lg:text-2xl font-bold mb-4 lg:mb-6">
-                        RND Technosoft is a winner for the following Clutch 2024 Global Awards
+                        Krenberry is a winner for the following Clutch 2024 Global Awards
                     </h2>
                     <div className="flex flex-col items-center">
                         <div className="text-green-400 font-bold mb-2">Clutch</div>
