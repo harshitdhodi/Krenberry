@@ -131,17 +131,25 @@ const PricingSection = () => {
     );
   };
 
+  const splitHeading = (text) => {
+    const words = text.trim().split(" ");
+    const midpoint = Math.floor(words.length / 2);
+    const firstPart = words.slice(0, midpoint).join(" ") + " ";
+    const secondPart = words.slice(midpoint).join(" ");
+    return { firstPart, secondPart };
+  };
+
   return (
     <>
       <div className="mt-20">
         <div className="text-center p-6">
         {!showHourlyPackages && 
          <>
-          <h2 className="text-2xl md:text-4xl font-semibold text-gray-800 mb-8">
-          {heading}
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-8">
+          {splitHeading(heading).firstPart}
+  <span className="text-[#ec2127]">{splitHeading(heading).secondPart}</span>
         </h2>
-          <p className="text-lg md:text-2xl px-4 md:px-20 text-gray-600"  dangerouslySetInnerHTML={{ __html: subHeading }}></p>
-      
+          <p className="text-xl lg:text-2xl px-4 md:px-20 text-gray-600"  dangerouslySetInnerHTML={{ __html: subHeading }}></p>
          </>
         }
         

@@ -100,7 +100,7 @@ function ServiceSlider() {
         <h2 className="text-4xl md:text-5xl  font-semibold">
           Our <span className="text-[#ec2127]">Services</span>
         </h2>
-        <h3 className="mt-4 text-lg md:text-xl">
+        <h3 className="mt-4 text-xl text-[#39b54a] md:text-xl">
           Visualizing Success Through Our Work
         </h3>
       </div>

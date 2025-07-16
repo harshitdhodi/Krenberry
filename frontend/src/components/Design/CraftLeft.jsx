@@ -123,7 +123,7 @@ export default function CraftLeft() {
             ) : (
               service ?.photo && service.photo.length > 0 && (
                 <img
-                  src={`/api/image/download/${service.photo[0]}`} // Display the first photo if video isn't available
+                  src={`/web.png`} // Display the first photo if video isn't available
                   alt="Service Image"
                   className="w-[450px] h-[450px] object-cover rounded-2xl"
                 />

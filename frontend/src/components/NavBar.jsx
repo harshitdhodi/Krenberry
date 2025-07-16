@@ -142,8 +142,8 @@ const Navbar = () => {
           Our website is currently under construction. Please check back later.
         </div>
 
-        <div className=" xl:mx-20 mx-10 flex justify-between items-center ">
-          <div className=" items-center hidden xl:flex   space-x-8">
+        <div className=" mx-20 flex justify-between items-center py-2">
+          <div className="flex items-center space-x-8">
             <NavLink to="/">
               {colorlogo && colorlogo.photo ? (
                 <img

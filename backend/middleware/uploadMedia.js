@@ -32,7 +32,7 @@ const storage = multer.diskStorage({
             // Use original extension for WebM files, convert others to webp
             const isWebM = file.mimetype === 'video/webm';
             const ext = isWebM ? '.webm' : '.webp';
-            fileName = `${file.fieldname}_${Date.now()}${ext}`;
+            fileName =` ${file.fieldname}_${Date.now()}${ext}`;
         }
         cb(null, fileName);
     }
@@ -87,7 +87,7 @@ const retryUnlink = (filePath, retries = 10, delay = 200) => {
                         console.log(`File ${filePath} doesn't exist, considering deletion successful`);
                         resolve();
                     } else {
-                        console.error(`Failed to delete file ${filePath} after retries:`, err);
+                        console.error(`Failed to delete file ${filePath} after retries:, err`);
                         // Don't reject, just log the error and continue
                         resolve();
                     }
@@ -111,7 +111,7 @@ const safeCleanup = async (filePath) => {
             await retryUnlink(filePath);
         }
     } catch (error) {
-        console.warn(`Warning: Could not clean up temporary file ${filePath}:`, error.message);
+        console.warn(`Warning: Could not clean up temporary file ${filePath}:, error.message`);
         // Don't throw error, just log warning
     }
 };
@@ -125,7 +125,7 @@ const scheduleCleanup = (filePath) => {
                 console.log(`Delayed cleanup successful for ${filePath}`);
             }
         } catch (error) {
-            console.warn(`Delayed cleanup failed for ${filePath}:`, error.message);
+            console.warn(`Delayed cleanup failed for ${filePath}:, error.message`);
         }
     }, 5000); // Try again after 5 seconds
 };
@@ -233,7 +233,7 @@ const uploadMedia = (req, res, next) => {
                 next();
             } catch (err) {
                 console.log('Error processing images:', err);
-                res.status(500).send({ error: `Error processing images: ${err.message}` });
+                res.status(500).send({ error:` Error processing images: ${err.message}` });
             }
         } else {
             next();

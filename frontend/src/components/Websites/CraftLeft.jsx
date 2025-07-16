@@ -72,10 +72,10 @@ export default function CraftLeft() {
   const faqData = service.questions || [];
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="flex flex-col lg:flex-row-reverse gap-10 xl:px-28 w-full">
+    <div className="flex xl:flex-col items-center">
+      <div className="flex flex-col lg:flex-row-reverse gap-10 lg:px-28 w-full">
         {/* Text Content for Large Screens */}
-        <div className="w-full lg:w-1/2 px-4 flex flex-col justify-center order-1">
+        <div className="w-full lg:w-[60%] px-4 flex flex-col justify-center order-1">
           <div className="max-w-full overflow-hidden">
             {service.heading ? (
               <div
@@ -134,8 +134,8 @@ export default function CraftLeft() {
         </div>
 
         {/* Video Content */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center order-2">
-          <div className="relative rounded-2xl border-[3px] m-10 overflow-hidden group transition-all duration-300">
+        <div className="w-full lg:w-[40%] flex items-center justify-center order-2">
+          <div className="relative rounded-2xl border-[3px] overflow-hidden group transition-all duration-300 mx-4 my-4">
             {videoUrl ? (
               <video
                 src={videoUrl}
@@ -151,7 +151,7 @@ export default function CraftLeft() {
                 <img
                   src={`/api/image/download/${service.photo[0]}`} // Display the first photo if video isn't available
                   alt="Service Image"
-                  className="w-[450px] h-[450px] object-cover rounded-2xl"
+                  className="w-[750px] h-[400px] sm:object-contain lg:object-fill md:object-fill md:h-auto rounded-2xl"
                 />
               )
             )}

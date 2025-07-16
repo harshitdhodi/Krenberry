@@ -167,7 +167,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Column */}
-          <div className="lg:col-span-1 col-span-1 sm:col-span-2">
+          <div className="xl:col-span-1 col-span-1 sm:col-span-2">
             <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-xl shadow-sm border border-gray-100">
               <h4 className="font-bold text-lg lg:text-xl mb-3 sm:mb-4 lg:mb-6 text-gray-800">
                 Weekly Design Juice

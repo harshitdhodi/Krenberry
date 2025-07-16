@@ -44,8 +44,8 @@ const processImage = async (filePath) => {
         const fileExtension = path.extname(filePath).toLowerCase();
         const directory = path.dirname(filePath);
         const filename = path.basename(filePath, fileExtension);
-        const tempPath = path.join(directory, `${filename}_temp.webp`);
-        const finalPath = path.join(directory, `${filename}.webp`);
+        const tempPath = path.join(directory,` ${filename}_temp.webp`);
+        const finalPath = path.join(directory,` ${filename}.webp`);
 
         // Check if the uploaded file is an image
         if (fileExtension !== '.webp' && ['.jpg', '.jpeg', '.png'].includes(fileExtension)) {

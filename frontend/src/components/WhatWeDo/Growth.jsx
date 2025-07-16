@@ -65,9 +65,22 @@ const ExpertiseComponent = () => {
     fetchData();
   }, []);
 
+  const splitHeading = (text) => {
+    const words = text.trim().split(" ");
+    const midpoint = Math.floor(words.length / 2);
+    const firstPart = words.slice(0, midpoint).join(" ") + " ";
+    const secondPart = words.slice(midpoint).join(" ");
+    return { firstPart, secondPart };
+  };
+
+
   return (
     <div id="expertiseComponent" className="flex flex-col items-center justify-center mt-8 md:mt-20  p-4 md:p-8 mb-16">
-      <h2 className="text-3xl md:text-5xl pb-10 font-semibold">{heading}</h2>
+      <h2 className="text-3xl md:text-5xl pb-10 font-semibold text-center">
+      {splitHeading(heading).firstPart}
+      <span className="text-[#ec2127]">{splitHeading(heading).secondPart}</span>
+    </h2>
+
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center md:w-[80%]">
         {counters.map((counter, index) => (
           <div key={index} className="flex flex-col items-center justify-center mb-6 md:mb-0 p-4">

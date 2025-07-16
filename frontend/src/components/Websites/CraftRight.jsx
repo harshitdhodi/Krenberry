@@ -67,10 +67,10 @@ export default function CraftRight() {
   const faqData = service.questions || [];
 
   return (
-    <div className="flex flex-col items-center mt-20">
+    <div className="flex xl:flex-col items-center mt-20">
       <div className="flex flex-col lg:flex-row gap-10 px-5 lg:px-28 w-full">
         {/* Text Content for Large Screens */}
-        <div className="w-full lg:w-1/2 px-4 flex flex-col justify-center order-1">
+        <div className="w-full lg:w-[60%] px-4 flex flex-col justify-center order-1">
           {/* Render the heading only if service and heading are available */}
           <div className="max-w-full overflow-hidden">
             {service.heading ? (
@@ -121,8 +121,8 @@ export default function CraftRight() {
         </div>
 
         {/* Video or Photo Content */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center order-2">
-          <div className="relative rounded-2xl border-[3px] m-5 overflow-hidden group transition-all duration-300">
+        <div className="w-full lg:w-[40%] flex items-center  justify-center order-2">
+          <div className="relative rounded-2xl border-[3px] overflow-hidden group transition-all duration-300 mx-4 my-4">
             {videoUrl ? (
               <video 
                 src={videoUrl}
@@ -135,9 +135,9 @@ export default function CraftRight() {
             ) : (
               service.photo && service.photo.length > 0 && (
                 <img
-                  src={`/api/image/download/${service.photo[0]}`} // Display the first photo if video isn't available
+                  src={`/api/image/download/${service.photo[0]}`}  // Display the first photo if video isn't available
                   alt="Service Image"
-                  className="w-[700px] h-[400px] object-cover rounded-2xl"
+                  className="w-[750px] h-[400px] sm:object-contain lg:object-fill md:object-fill md:h-auto rounded-2xl"
                 />
               )
             )}

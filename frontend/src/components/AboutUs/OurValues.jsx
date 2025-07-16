@@ -87,7 +87,7 @@ const OurValues = () => {
             <img
               src={`/api/image/download/${values[0].photo[0]}`}
               alt={values[0]?.alt[0] || "Core Value Image"}
-              className="w-full h-full object-contain"
+              className="w-full object-contain"
             />
           ) : (
             <img
@@ -102,7 +102,7 @@ const OurValues = () => {
       {/* Shape Divider Bottom */}
       <div className="absolute inset-x-0 bottom-0">
         <svg
-          className="w-full"
+          className="w-full h-[100px] block"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1000 100"
           preserveAspectRatio="none"
