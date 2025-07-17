@@ -115,7 +115,7 @@ export default function Sidebar() {
     {
       title: "Products", icon: <FaShoppingCart size={20} />, submenu: [
         { title: "Categories", icon: <BiCategory size={20} />, path: "/ProductCategory" },
-        { title: "Banefits", icon: <FaCartPlus size={20} />, path: "/benefits" },
+        { title: "Benefits", icon: <FaCartPlus size={20} />, path: "/benefits" },
         { title: "Products", icon: <FaOpencart size={20} />, path: "/product" },
       ]
     },

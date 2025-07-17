@@ -101,12 +101,13 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
   const [resetKey, setResetKey] = useState(0);
 
   const budgetOptions = [
-    "INR 1 Cr. and Above",
-    "INR 50 Lacs - 1 Cr.",
-    "INR 25 Lacs - 50 Lacs.",
-    "INR 15 Lacs - 25 Lacs.",
-    "INR 5 Lacs - 15 Lacs.",
-  ];
+  "CAD 165K and Above",
+  "CAD 83K - 165K",
+  "CAD 41K - 83K",
+  "CAD 25K - 41K",
+  "CAD 8K - 25K",
+];
+
 
   useEffect(() => {
     const fetchCategory = async () => {
@@ -221,7 +222,7 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
         value={formData.budget}
         onChange={handleInputChange}
         suggestions={budgetOptions}
-        placeholder="Your Monthly Budget(INR)"
+        placeholder="Your Monthly Budget(CAD)"
         fieldName="budget"
         resetKey={resetKey}
       />

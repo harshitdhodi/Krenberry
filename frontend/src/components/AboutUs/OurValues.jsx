@@ -87,7 +87,7 @@ const OurValues = () => {
             <img
               src={`/api/image/download/${values[0].photo[0]}`}
               alt={values[0]?.alt[0] || "Core Value Image"}
-              className="w-full object-contain"
+              className="w-full max-h-[600px] object-contain"
             />
           ) : (
             <img

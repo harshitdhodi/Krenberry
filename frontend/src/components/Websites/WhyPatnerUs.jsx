@@ -29,11 +29,11 @@ const WhyPartnerWithUs = () => {
 
   return (
     <div>
-      <div className="relative">
+      <div className="relative leading-none -mb-1">
         <img
           src={Wave3}
           alt="background"
-          className="w-full h-auto transform rotate-180"
+          className="w-full h-auto transform rotate-180 block"
         />
       </div>
 

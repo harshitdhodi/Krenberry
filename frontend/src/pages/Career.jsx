@@ -38,19 +38,19 @@ const Banner = () => {
     fetchHeadings();
   }, []);
   return (
-    <div className="relative bg-gradient-to-r from-yellow-600 to-black h-80 md:h-[70vh]">
+    <div className="relative bg-gradient-to-r from-[#ec2127] to-black h-80 md:h-[70vh] leading-none overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative h-full flex items-center justify-center px-4">
         <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-4">
+          <h1 className="text-4xl md:text-6xl font-semibold text-white mb-4">
             {heading}
           </h1>
-          <p className="text-xl md:text-2xl text-yellow-100 font-serif">
+          <p className="text-xl md:text-2xl text-red-100 font-semibold">
             {subheading}
           </p>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute bottom-0 left-0 right-0 -mb-[1px]">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#f3f4f6"
@@ -68,14 +68,11 @@ const JobCard = ({ job, onApply }) => {
 
   useEffect(() => {
     if (modalIsOpen) {
-      // Disable scrolling
       document.body.style.overflow = "hidden";
     } else {
-      // Enable scrolling
       document.body.style.overflow = "";
     }
 
-    // Cleanup function to ensure scrolling is re-enabled if the component is unmounted
     return () => {
       document.body.style.overflow = "";
     };
@@ -89,30 +86,28 @@ const JobCard = ({ job, onApply }) => {
     setModalIsOpen(false);
   };
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+    <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl h-full flex flex-col">
       <img
         src={`/api/image/download/${job.photo}`}
         alt={`${job.department} department`}
-        className="w-full h-[17rem] "
+        className="w-full h-[17rem] object-cover"
       />
-      <div className="p-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
-              {job.jobtitle}
-            </h2>
-            {/* <p className="text-lg text-gray-600 mb-2">{job.department}</p> */}
-            <div className="flex flex-wrap gap-2">
-              <span className="flex items-center text-sm text-gray-500">
-                <MapPin size={16} className="mr-1" /> {job.jobType}
-              </span>
-              <span className="flex items-center text-sm text-gray-500">
-                <Clock size={16} className="mr-1" /> {job.employmentType}
-              </span>
-            </div>
+      <div className="p-6 flex flex-col flex-grow">
+        <div className="mb-4">
+          <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            {job.jobtitle}
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            <span className="flex items-center text-sm text-gray-500">
+              <MapPin size={16} className="mr-1" /> {job.jobType}
+            </span>
+            <span className="flex items-center text-sm text-gray-500">
+              <Clock size={16} className="mr-1" /> {job.employmentType}
+            </span>
           </div>
         </div>
-        <p className="text-gray-700 mb-4">
+
+        <div className="flex-grow mb-4 text-gray-700">
           <ReactQuill
             readOnly={true}
             value={job.description}
@@ -120,35 +115,30 @@ const JobCard = ({ job, onApply }) => {
             theme="bubble"
             className="quill"
           />
-        </p>
-        {/* {expanded && (
-                    <div className="mt-4">
-                        <h3 className="font-semibold text-gray-800 mb-2">Requirements:</h3>
-                        <p className="text-gray-700">{job.requirements}</p>
-                    </div>
-                )} */}
-        <div className="flex flex-col sm:flex-row justify-between items-center mt-6 h-[2cm] my-auto">
+        </div>
+
+        <div className="mt-auto flex flex-col sm:flex-row justify-between items-center gap-3 pt-4 border-t border-gray-200">
           <button
             onClick={onApply}
-            className="w-full sm:w-auto bg-yellow-400 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-full flex items-center justify-center transition duration-300 mb-3 sm:mb-0"
+            className="w-full sm:w-auto bg-[#ec2127] hover:bg-red-700 text-white font-bold py-2 px-6 rounded-full flex items-center justify-center transition duration-300"
           >
             Apply Now
             <ChevronRight className="ml-2" size={18} />
           </button>
           <button
             onClick={openModal}
-            className="w-full sm:w-auto text-yellow-400 hover:text-yellow-600 font-semibold flex items-center justify-center transition duration-300"
+            className="w-full sm:w-auto text-[#ec2127] hover:text-red-700 font-semibold flex items-center justify-center transition duration-300"
           >
             Learn More
-            {/* <ChevronDown className="ml-1" size={18} /> */}
           </button>
         </div>
       </div>
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Job Requirements"
-        className="fixed inset-0 bg-white p-8 max-w-lg mx-auto my-16 rounded-lg shadow-lg overflow-auto max-h-[80vh] "
+        className="fixed inset-0 bg-white p-8 max-w-lg mx-auto my-16 rounded-lg shadow-lg overflow-auto max-h-[80vh]"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50 z-50"
       >
         <div className="flex justify-between items-center relative">
@@ -158,7 +148,7 @@ const JobCard = ({ job, onApply }) => {
           <button
             onClick={closeModal}
             aria-label="Close"
-            className=" absolute -top-4 -right-6 text-black hover:text-yellow-500"
+            className="absolute -top-4 -right-6 text-black hover:text-[#ec2127]"
           >
             <svg
               className="w-6 h-6"
@@ -187,7 +177,7 @@ const JobCard = ({ job, onApply }) => {
         </div>
         <button
           onClick={closeModal}
-          className="mt-4 bg-yellow-400 hover:bg-yellow-600 text-white py-2 px-4 rounded-full transition duration-300"
+          className="mt-4 bg-[#ec2127] hover:bg-red-700 text-white py-2 px-4 rounded-full transition duration-300"
         >
           Close
         </button>
@@ -252,7 +242,6 @@ const JobApplicationModal = ({ job, isOpen, onClose }) => {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
-      // alert('Application submitted successfully!');
       navigate("/thankyou");
       onClose();
       setName("");
@@ -335,7 +324,7 @@ const JobApplicationModal = ({ job, isOpen, onClose }) => {
           </div>
           <button
             type="submit"
-            className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg w-full"
+            className="bg-[#ec2127] hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg w-full"
           >
             Submit Application
           </button>
@@ -348,8 +337,8 @@ const JobApplicationModal = ({ job, isOpen, onClose }) => {
 const CareerPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterDepartment, setFilterDepartment] = useState("All");
-  const [selectedJob, setSelectedJob] = useState(null); // For modal
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+  const [selectedJob, setSelectedJob] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [careerOptions, setCareerOptions] = useState([]);
 
   const fetchData = async () => {
@@ -390,8 +379,8 @@ const CareerPage = () => {
     <div className="bg-gray-100 min-h-screen">
       <Banner />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 mt-4">
-        <div className="mb-12 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-wrap w-full  justify-start space-x-2">
+        <div className="mb-12 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-wrap justify-start gap-2">
             {departments.map((dept) => (
               <button
                 key={dept}
@@ -401,13 +390,13 @@ const CareerPage = () => {
                               filterDepartment === dept
                                 ? "bg-black text-white"
                                 : "bg-white text-black"
-                            }`}
+                            } transition duration-300`}
               >
                 {dept}
               </button>
             ))}
           </div>
-          <div className="w-full md:w-1/2 mb-4 md:mb-0">
+          <div className="w-full md:w-1/2">
             <div className="relative flex items-center">
               <input
                 type="text"
@@ -423,8 +412,8 @@ const CareerPage = () => {
           </div>
         </div>
         <p className="text-gray-400">
-    Can’t find the job you want? Send your resume to <span className="hover:text-blue-900 transition-all duration-300 text-gray-500 "><a href="mailto:hr@rndtechnosoft.com">hr@rndtechnosoft.com</a></span> and we’ll contact you when a new position opens.
-</p>
+          Can&apos;t find the job you want? Send your resume to <span className="hover:text-blue-900 transition-all duration-300 text-gray-500"><a href="mailto:hr@krenberry.com">hr@krenberry.com</a></span> and we&apos;ll contact you when a new position opens.
+        </p>
 
         {filteredJobs.length > 0 ? (
           <div className="grid gap-8 md:grid-cols-2 my-16">

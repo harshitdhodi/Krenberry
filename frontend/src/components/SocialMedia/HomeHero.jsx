@@ -45,7 +45,7 @@ const AutocompleteInput = ({
         onFocus={() => setIsOpen(true)}
         placeholder={loading ? "Loading cities..." : placeholder}
         disabled={disabled || loading}
-        className="w-full px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+        className="w-full px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-red-500 transition-colors duration-300"
       />
       {isOpen && filteredSuggestions?.length > 0 && (
         <ul className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-40 overflow-auto">
@@ -85,11 +85,11 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
   const [loadingCities, setLoadingCities] = useState(false);
 
   const budgetOptions = [
-    "INR 1 Cr. and Above",
-    "INR 50 Lacs - 1 Cr.",
-    "INR 25 Lacs - 50 Lacs.",
-    "INR 15 Lacs - 25 Lacs.",
-    "INR 5 Lacs - 15 Lacs.",
+      "CAD 165K and Above",
+      "CAD 83K - 165K",
+      "CAD 41K - 83K",
+      "CAD 25K - 41K",
+      "CAD 8K - 25K",
   ];
 
   useEffect(() => {
@@ -164,7 +164,7 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
           placeholder={field.charAt(0).toUpperCase() + field.slice(1) + (field === "phone" ? " No." : "")}
           value={formData[field]}
           onChange={handleInputChange}
-          className="w-full mb-4 px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-yellow-400 transition-colors duration-300"
+          className="w-full mb-4 px-3 py-1 rounded-lg bg-white/5 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-red-500 transition-colors duration-300"
           required
         />
       ))}
@@ -190,7 +190,7 @@ const ContactForm = React.memo(({ isModal = false, onSubmit, loading }) => {
         value={formData.budget}
         onChange={handleInputChange}
         suggestions={budgetOptions}
-        placeholder="Your Monthly Budget(INR)"
+        placeholder="Your Monthly Budget(CAD)"
         name="budget"
       />
 

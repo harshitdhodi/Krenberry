@@ -109,7 +109,7 @@ export default function Logotype() {
           {logotypes.map((card) => (
             <div key={card.id} className="m-4 w-64 h-64 [perspective:1000px]">
               <div className="relative w-full h-full transition-transform duration-500  [transform-style:preserve-3d] hover:[transform:rotateX(180deg)]">
-                <div className="absolute w-full h-full [backface-visibility:hidden]  shadow-lg bg-[#f7dc86] flex flex-col items-center justify-center p-4">
+                <div className="absolute w-full h-full [backface-visibility:hidden]  shadow-lg flex flex-col items-center justify-center p-4">
                   <h1 className="text-xl font-bold text-center">{card.title}</h1>
                   <img
                     src={`/api/image/download/${card.photo[0]}`}

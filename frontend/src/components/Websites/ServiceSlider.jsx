@@ -110,9 +110,9 @@ function ServiceSlider() {
         <div className="service-slider relative">
           <Slider {...settings}>
             {services.map((service) => (
-              <div key={service.slug} className="service-card p-4">
+              <div key={service.slug} className="p-4">
                 <Link to={`/${service.slug}`}>
-                  <div className="relative h-56 md:h-72 lg:h-80 overflow-hidden">
+                  <div className="relative h-56 md:h-72 lg:h-80 overflow-hidden border-[3px]">
                     <img
                       src={`/api/logo/download/${service.photo}`}
                       alt={service.alt}
@@ -136,9 +136,12 @@ function ServiceSlider() {
         className={`flex justify-center items-center gap-4`}
       >
           {services.map((service) => (
-            <div key={service.slug} className="service-card p-4 border border-gray-500">
+            <div
+              key={service.slug}
+              className="p-4 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
+            >
               <Link to={`/${service.slug}`}>
-                <div className="relative h-56 overflow-hidden">
+                <div className="relative h-56 overflow-hidden rounded-xl">
                   <img
                     src={`/api/logo/download/${service.photo}`}
                     alt={service.alt}
@@ -148,12 +151,16 @@ function ServiceSlider() {
                 </div>
               </Link>
               <div className="mt-4 text-center">
-                <Link to={`/${service.slug}`} className="text-gray-600 mt-1 text-sm md:text-base">
+                <Link
+                  to={`/${service.slug}`}
+                  className="text-gray-800 font-medium text-sm md:text-base hover:text-[#ec2127] transition-colors duration-200"
+                >
                   {service.category}
                 </Link>
               </div>
             </div>
           ))}
+
         </div>
       )}
     </div>

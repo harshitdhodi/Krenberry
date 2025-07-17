@@ -17,8 +17,8 @@ const sendVerificationEmail = async (email) => {
             from: process.env.EMAIL_USER, // sender address
             to: email, // list of receivers
             subject: 'Account Verified', // Subject line
-            text: 'Your account has been verified , you can now login to E-Kirana website with your register email id and password  .', // Plain text body
-            html: '<b>Your account has been verified , you can now login now login to E-Kirana website with your register email id and password  .</b>' // HTML body
+            text: 'Your account has been verified , you can now login to Krenberry website with your register email id and password  .', // Plain text body
+            html: '<b>Your account has been verified , you can now login now login to Krenberry website with your register email id and password  .</b>' // HTML body
         });
 
        
@@ -33,8 +33,8 @@ const sendBlockEmail = async (email) => {
             from: process.env.EMAIL_USER, // sender address
             to: email, // list of receivers
             subject: 'Account has been Blocked', // Subject line
-            text: 'Your account has been Blocked on E-Kirana because inappropriate use, you cannot access your account now .', // Plain text body
-            html: '<b>Your account has been Blocked on E-Kirana because inappropriate use, you cannot access your account now .</b>' // HTML body
+            text: 'Your account has been Blocked on Krenberry because inappropriate use, you cannot access your account now .', // Plain text body
+            html: '<b>Your account has been Blocked on Krenberry because inappropriate use, you cannot access your account now .</b>' // HTML body
         });
 
     } catch (error) {

@@ -134,11 +134,13 @@ export default function CraftRight() {
               />
             ) : (
               service.photo && service.photo.length > 0 && (
-                <img
-                  src={`/api/image/download/${service.photo[0]}`}  // Display the first photo if video isn't available
-                  alt="Service Image"
-                  className="w-[750px] h-[400px] sm:object-contain lg:object-fill md:object-fill md:h-auto rounded-2xl"
-                />
+                <div className="w-full flex justify-center">
+                  <img
+                    src={`/api/image/download/${service.photo[0]}`} 
+                    alt="Service Image"
+                    className="w-full max-w-[750px] h-[400px] aspect-[15/8] object-cover sm:object-contain rounded-2xl"
+                  />
+                </div>
               )
             )}
             <div className="absolute inset-0 rounded-2xl border-4 border-transparent m-10 transition-all duration-300"></div>
