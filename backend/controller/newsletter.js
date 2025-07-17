@@ -29,7 +29,51 @@ exports.addEmail = async (req, res) => {
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'Newsletter Subscription Confirmation',
-            text: `Hello,${name}\n\nThank you for subscribing to our newsletter! You will now receive updates from us.\n\nBest regards,\nKrenberry.`
+            html: `
+<div style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 40px 0;">
+  <table align="center" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <!-- Header with logo and title -->
+    <tr>
+      <td style="background-color: #ec2127; padding: 20px; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 22px; margin: 10px 0 0;">Krenberry Newsletter</h1>
+      </td>
+    </tr>
+
+    <!-- Body content -->
+    <tr>
+      <td style="padding: 30px;">
+        <p style="font-size: 16px; color: #333333;">Hi ${name || 'there'},</p>
+        <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+          Thank you for subscribing to <strong>Krenberry</strong>! We're thrilled to have you on board.
+          You'll now receive our latest updates, news, and exclusive offers straight to your inbox.
+        </p>
+        <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+          Stay tuned — exciting things are coming your way!
+        </p>
+
+        <!-- CTA Button -->
+        <div style="text-align: center; margin: 30px 0;">
+          <a href="https://krenberry.com" style="background-color: #39B54A; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 5px; font-size: 16px; display: inline-block;">
+            Visit Our Website
+          </a>
+        </div>
+
+        <p style="font-size: 14px; color: #999999; text-align: center;">
+          If you didn't subscribe, you can safely ignore this email.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td style="background-color: #F7F4EE; padding: 20px 30px; text-align: center; font-size: 13px; color: #999999;">
+        &copy; ${new Date().getFullYear()} Krenberry. All rights reserved.<br>
+      </td>
+    </tr>
+  </table>
+</div>
+            `,
         };
 
         // Send the email

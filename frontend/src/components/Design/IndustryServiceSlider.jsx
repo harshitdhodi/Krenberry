@@ -136,24 +136,30 @@ function IndustryServiceSlider() {
         // If services <= 5, show as a grid
         <div className="flex flex-wrap gap-6 justify-center items-center">
           {services.map((service) => (
-            <div key={service.slug} className="service-card p-4 border border-gray-500">
-              <Link to={`/${service.slug}`}>
-                <div className="relative w-56  lg:h-80 overflow-hidden">
-                  <img
-                    src={`/api/logo/download/${service.photo}`}
-                    alt={service.alt}
-                    title={service.imgtitle}
-                    className="w-full h-full object-contain transition-transform duration-300 transform hover:scale-105"
-                  />
-                </div>
-              </Link>
-              <div className="mt-4 text-center">
-                <Link to={`/${service.slug}`} className="text-gray-600 mt-1 text-sm md:text-base">
-                  {service.category}
-                </Link>
+          <div
+            key={service.slug}
+            className="service-card p-4 bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
+          >
+            <Link to={`/${service.slug}`}>
+              <div className="relative h-56 overflow-hidden rounded-xl">
+                <img
+                  src={`/api/logo/download/${service.photo}`}
+                  alt={service.alt}
+                  title={service.imgtitle}
+                  className="w-full h-full object-contain transition-transform duration-300 transform hover:scale-105"
+                />
               </div>
+            </Link>
+            <div className="mt-4 text-center">
+              <Link
+                to={`/${service.slug}`}
+                className="text-gray-800 font-medium text-sm md:text-base hover:text-[#ec2127] transition-colors duration-200"
+              >
+                {service.category}
+              </Link>
             </div>
-          ))}
+          </div>
+        ))}
         </div>
       )}
     </div>

@@ -27,7 +27,7 @@ const createPopupInquiry = async (req, res) => {
       subject: "New Inquiry Received",
       html: `
                 <div style="text-align: center;">
-                    <img src="https://krenberry.com/api/logo/download/rndlogo.png" alt="Krenberry Logo" style="width: 150px; height: auto;"/>
+                    <img src="https://krenberry.com/api/logo/download/photo_1732356261043.webp" alt="Krenberry Logo" style="width: 150px; height: auto;"/>
                     <h2>A new inquiry has been submitted</h2>
                     <p><strong>Name:</strong> ${newInquiry.name}</p>
                     <p><strong>Email:</strong> ${newInquiry.email}</p>

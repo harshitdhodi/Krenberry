@@ -20,66 +20,95 @@ const postInquiry = async (req, res) => {
     const logoStyle = "width: 100px; height: auto;";
 
     const emailHTML = `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>New Inquiry</title>
-          <style>
-              body {
-                  font-family: Arial, sans-serif;
-                  margin: 0;
-                  padding: 0;
-              }
-              .container {
-                  width: 100%;
-                  padding: 20px;
-                  background-color: #ffffff;
-                  border-radius: 10px; 
-                  max-width: 500px;
-                  margin: 20px auto;
-                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-              }
-              h2 {
-                  color: #333;
-                  text-align: center;
-              }
-              p {
-                  font-size: 16px;
-                  color: #555;
-                  line-height: 1.6;
-              }
-              .field {
-                  font-weight: bold;
-                  color: #333;
-              }
-              .footer {
-                  margin-top: 20px;
-                  font-size: 12px;
-                  color: #aaa;
-                  text-align: center;
-              }
-          </style>
-      </head>
-      <body>
-          <div class="container">
-              <img src="${logoImageUrl}" style="${logoStyle}" alt="Krenberry Logo"/>
-              <h2>New Inquiry</h2>
-              <p><span class="field">First Name:</span> ${newInquiry.firstname}</p>
-              <p><span class="field">Last Name:</span> ${newInquiry.lastname}</p>
-              <p><span class="field">Email:</span> ${newInquiry.email}</p>
-              <p><span class="field">Mobile No:</span> ${newInquiry.mobileNo}</p>
-              <p><span class="field">Company Size:</span> ${newInquiry.companysize}</p>
-              <p><span class="field">Active User:</span> ${newInquiry.activeuser}</p>
-              <p><span class="field">Topic:</span> ${newInquiry.topic}</p>
-              <p><span class="field">Message:</span> ${newInquiry.message}</p>
-              <div class="footer">
-                  <p>This is an automated email. Please do not reply.</p>
-              </div>
-          </div>
-      </body>
-      </html>
+<div style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 40px 0;">
+  <table align="center" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <!-- Header with logo and title -->
+    <tr>
+      <td style="background-color: #ec2127; padding: 20px; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 22px; margin: 10px 0 0;">Krenberry</h1>
+      </td>
+    </tr>
+
+    <!-- Body content -->
+    <tr>
+      <td style="padding: 30px;">
+        <h2 style="color: #ec2127; font-size: 20px; margin: 0 0 25px; text-align: center;">New Inquiry Received</h2>
+        
+        <p style="font-size: 16px; color: #333333; margin-bottom: 25px;">
+          A new inquiry has been submitted through your website. Please find the details below:
+        </p>
+
+        <!-- Inquiry Details -->
+        <div style="background-color: #ffffff; padding: 20px; border-radius: 6px; margin-bottom: 20px;">
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">First Name:</span>
+                <span style="color: #333333; font-size: 14px; margin-left: 10px;">${newInquiry.firstname}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">Last Name:</span>
+                <span style="color: #333333; font-size: 14px; margin-left: 10px;">${newInquiry.lastname}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">Email:</span>
+                <span style="color: #333333; font-size: 14px; margin-left: 10px;">${newInquiry.email}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">Mobile No:</span>
+                <span style="color: #333333; font-size: 14px; margin-left: 10px;">${newInquiry.mobileNo}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">Company Size:</span>
+                <span style="color: #333333; font-size: 14px; margin-left: 10px;">${newInquiry.companysize}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">Active User:</span>
+                <span style="color: #333333; font-size: 14px; margin-left: 10px;">${newInquiry.activeuser}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; border-bottom: 1px solid #f0f0f0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">Topic:</span>
+                <span style="color: #333333; font-size: 14px; margin-left: 10px;">${newInquiry.topic}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0;">
+                <span style="font-weight: bold; color: #ec2127; font-size: 14px;">Message:</span>
+                <div style="color: #333333; font-size: 14px; margin-top: 8px; line-height: 1.5; background-color: #f9f9f9; padding: 10px; border-radius: 4px;">
+                  ${newInquiry.message}
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p style="font-size: 14px; color: #999999; text-align: center;">
+          This is an automated email. Please do not reply to this message.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td style="background-color: #F7F4EE; padding: 20px 30px; text-align: center; font-size: 13px; color: #999999;">
+        &copy; ${new Date().getFullYear()} Krenberry. All rights reserved.<br>
+        New inquiry notification system
+      </td>
+    </tr>
+  </table>
+</div>
     `;
 
     const adminEmailOptions = {
@@ -95,21 +124,62 @@ const postInquiry = async (req, res) => {
       to: savedInquiry.email,
       subject: 'Thank You for Your Inquiry',
       html: `
-        <html>
-        <body>
-          <div style="text-align: center; padding: 20px;">
-            <img src="${logoImageUrl}" style="${logoStyle}" alt="Krenberry Logo"/>
-            <h2>Thank You for Your Inquiry</h2>
-            <p>Dear ${inquiryData.firstname || 'Valued Customer'},</p>
-            <p>Thank you for reaching out. We have received your inquiry and will get back to you soon.</p>
-            <p>Best regards,</p>
-            <p>Krenberry</p>
-             <div class="footer">
-                  <p>This is an automated email. Please do not reply.</p>
-              </div>
-          </div>
-        </body>
-        </html>
+   <div style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 40px 0;">
+  <table align="center" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <!-- Header with logo and title -->
+    <tr>
+      <td style="background-color: #ec2127; padding: 20px; text-align: center;">
+        <h1 style="color: #ffffff; font-size: 22px; margin: 10px 0 0;">Krenberry</h1>
+      </td>
+    </tr>
+
+    <!-- Body content -->
+    <tr>
+      <td style="padding: 30px;">
+        <h2 style="color: #ec2127; font-size: 20px; margin: 0 0 20px; text-align: center;">Thank You for Your Inquiry</h2>
+        
+        <p style="font-size: 16px; color: #333333;">Dear ${inquiryData.firstname || 'Valued Customer'},</p>
+        
+        <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+          Thank you for reaching out to <strong>Krenberry</strong>! We have received your inquiry and appreciate your interest in our services.
+        </p>
+        
+        <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+          Our team will carefully review your message and get back to you within 24-48 hours. We're committed to providing you with the best possible assistance.
+        </p>
+        
+        <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+          In the meantime, feel free to explore our website for more information about our products and services.
+        </p>
+
+        <!-- CTA Button -->
+        <div style="text-align: center; margin: 30px 0;">
+          <a href="https://krenberry.com" style="background-color: #39B54A; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 5px; font-size: 16px; display: inline-block;">
+            Visit Our Website
+          </a>
+        </div>
+
+        <p style="font-size: 16px; color: #333333; line-height: 1.6;">
+          Best regards,<br>
+          <strong>The Krenberry Team</strong>
+        </p>
+
+        <p style="font-size: 14px; color: #999999; text-align: center; margin-top: 30px;">
+          This is an automated email. Please do not reply to this message.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td style="background-color: #F7F4EE; padding: 20px 30px; text-align: center; font-size: 13px; color: #999999;">
+        &copy; ${new Date().getFullYear()} Krenberry. All rights reserved.<br>
+        If you need immediate assistance, please contact us through our website.
+      </td>
+    </tr>
+  </table>
+</div>
       `,
     };
 

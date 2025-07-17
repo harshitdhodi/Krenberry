@@ -23,7 +23,7 @@ exports.CreateCareerInquiry = async (req, res) => {
 
     await newInquiry.save();
 
-    const logoImageUrl = "https://krenberry.com/api/logo/download/rndlogo.png";
+    const logoImageUrl = "https://krenberry.com/api/logo/download/photo_1732356261043.webp";
     const logoStyle = "width: 100px; height: auto;";
 
     // HTML Email Template

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Inquiry from "../assets/inquiry.svg"
+import Inquiry from "../assets/quote.png"
 import { useNavigate } from 'react-router-dom';
 
 

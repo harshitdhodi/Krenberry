@@ -110,9 +110,9 @@ export default function HowRndHelp() {
         ref={containerRef}
         className="flex flex-col mx-4 md:mx-20 lg:mx-40 md:flex-row items-center mt-12 md:mt-40 space-y-6 md:space-y-0 md:space-x-8"
       >
-        <div className={`flex flex-col items-center md:w-2/3 space-y-4 ${isLargeScreen ? 'fade-in' : ''}`}>
-          <h2 className="text-2xl md:text-5xl text-white font-bold">{heading}</h2>
-          <p className="text-white text-lg md:text-xl">{subheading}</p>
+        <div className={`flex flex-col items-center md:items-start md:w-2/3 space-y-4 m-2 ${isLargeScreen ? 'fade-in' : ''}`}>
+          <h2 className="text-2xl md:text-5xl text-white font-bold text-center md:text-left">{heading}</h2>
+          <p className="text-white text-lg md:text-xl text-center md:text-left">{subheading}</p>
         </div>
         <div className={`md:flex justify-center md:w-1/2 hidden ${isLargeScreen ? 'fade-in' : ''}`}>
           <img
@@ -127,19 +127,19 @@ export default function HowRndHelp() {
       {/* Cards grid */}
       <div
         ref={fadeInContainerRef}
-        className="grid lg:grid-cols-2 justify-center items-center gap-4 w-[80%] mx-auto mt-12 pb-20 my-20"
+        className="grid lg:grid-cols-2 justify-center items-stretch gap-4 w-[80%] mx-auto mt-12 pb-20 my-20"
       >
         {cards.map((card, index) => (
-          <div key={index} className="flex flex-col">
-            <div className={`bg-white text-gray-900 p-6 md:p-12 rounded-3xl shadow-lg transition-transform duration-300 w-full h-full ${isLargeScreen ? 'fade-in' : ''}`}>
+          <div key={index} className="flex flex-col h-full">
+            <div className={`bg-white text-gray-900 p-6 md:p-12 rounded-3xl shadow-lg transition-transform duration-300 w-full h-full min-h-[500px] flex flex-col ${isLargeScreen ? 'fade-in' : ''}`}>
               <img src={`/api/icon/download/${card.icon}`} alt={card.title} className="h-12 w-12 mb-4" />
               <h3 className="text-xl md:text-3xl font-bold mb-4">{card.title}</h3>
-              <div>
+              <div className="flex-1">
                 {card.questionsAndAnswers.map((feature, i) => (
                   <div key={i} className="flex flex-col gap-3 mb-2">
                     <div className="flex items-center gap-2 justify-start">
-                      <FaCheckCircle className="text-xl" />
-                      <span className="text-lg md:text-xl font-bold text-[#ec2127]" dangerouslySetInnerHTML={{ __html: feature.question }}></span>
+                      <FaCheckCircle className="text-xl text-green-400" />
+                      <span className="text-lg md:text-xl font-bold text-black" dangerouslySetInnerHTML={{ __html: feature.question }}></span>
                     </div>
                     <span className="pl-6" dangerouslySetInnerHTML={{ __html: feature.answer }}></span>
                   </div>
@@ -150,10 +150,10 @@ export default function HowRndHelp() {
         ))}
       </div>
 
-      {/* Bottom SVG */}
-      <div className="absolute inset-x-0 bottom-0">
+      {/* Bottom SVG - Fixed to remove visible line */}
+      <div className="absolute inset-x-0 bottom-0 translate-y-px">
         <svg
-          className="w-full"
+          className="w-full h-full"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1000 100"
           preserveAspectRatio="none"
