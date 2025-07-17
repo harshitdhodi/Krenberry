@@ -82,13 +82,18 @@ const Footer = () => {
           
           {/* Company Info Column */}
           <div className="lg:col-span-1 col-span-1 sm:col-span-2">
-            <Link to="/" className="inline-block">
-              <img
-                src={`/api/logo/download/${logo.photo}`}
-                alt={logo.alt}
-                title={logo.imgtitle}
-                className="mb-4 h-12 sm:h-14 lg:h-16 max-w-full"
-              />
+            <Link to="/" className="inline-block relative">
+            {logo ? (
+              <div className="relative">
+                <img
+                  src={`/api/logo/download/${logo.photo}`}
+                  alt={logo.alt || ""}
+                  title={logo.imgTitle || ""}
+                  className="min-h-12 md:h-12 lg:h-14 xl:h-20 max-w-[150px] min-w-[100px] w-auto object-contain"
+                />
+                <div className="absolute inset-0 bg-transparent"></div>
+              </div>
+            ) : null}
             </Link>
             <p className='text-sm text-left text-gray-600 leading-relaxed'>
               {footerData.description}
