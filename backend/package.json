@@ -29,7 +29,7 @@
     "nodemailer": "^9.0.1",
     "npkill": "^0.12.2",
     "serve-static": "^1.15.0",
-    "sharp": "^0.33.5",
+    "sharp": "^0.35.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "xlsx": "https://cdn.sheetjs.com/xlsx-latest/xlsx-latest.tgz"
